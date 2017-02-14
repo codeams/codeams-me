@@ -1,6 +1,4 @@
 
-/* Normalization */
-
 *,
 *::before,
 *::after {
@@ -21,13 +19,14 @@ li {
   list-style: none;
 }
 
-/* Layout */
 
 body {
-  padding-top: 60px;
+  min-width: 355px;
+  padding: 60px 0;
+  background-color: #f7f7f7;
 }
 
-.main-content-wrapper {
+.wrapper {
   width: 80%;
   max-width: 930px;
   margin: 0 auto;
@@ -39,6 +38,7 @@ header {
 
 header .signature {
   display: block;
+  width: 100%;
   height: 100px;
   margin-bottom: 60px;
   background-image: url('../illustrations/signature.svg');
@@ -47,53 +47,59 @@ header .signature {
   background-size: auto 100%;
 }
 
-header .name {
-  display: none;
+nav {
+  margin: 0 auto;
 }
 
-header nav {
-
-}
-
-header nav ul {
+nav ul {
   display: block;
   margin-bottom: 60px;
   text-align: center;
+  font-weight: 700;
+  text-transform: uppercase;
 }
 
-header nav ul li {
+nav ul li {
   display: inline-block;
   margin-right: 70px;
   padding: 0 10px 10px;
   color: #676767;
 }
 
-header nav ul li:last-of-type {
+nav ul li:last-of-type {
   margin-right: 0;
 }
 
-header nav ul li:hover {
+nav ul li:hover {
   border-bottom: 3px solid #cecece;
 }
 
-header nav ul li.active {
+nav ul li.active {
   border-bottom: 3px solid #cecece;
 }
 
+nav ul li a,
+nav ul li a:visited,
+nav ul li a:hover,
+nav ul li a:active {
+  text-decoration: none;
+  color: inherit;
+}
 
-.project-showcase {
+
+.showcase {
   position: relative;
   width: 100%;
   margin-bottom: 90px;
 }
 
-.project-showcase .imac {
+.showcase .imac {
   position: relative;
   z-index: 1;
   width: 100%;
 }
 
-.project-showcase .screenshot {
+.showcase .screenshot {
   position: absolute;
   top: 0;
   left: 4%;
@@ -102,7 +108,7 @@ header nav ul li.active {
   padding-top: 3%;
 }
 
-.project-showcase .project-description {
+.showcase .project-description {
   position: absolute;
   top: 0;
   right: 0;
@@ -113,44 +119,118 @@ header nav ul li.active {
   color: #676767;
 }
 
-.project-showcase .project-description h1 {
+.showcase .project-description h1 {
   margin-bottom: 20px;
   font-size: inherit;
   font-weight: 600;
 }
 
-.project-showcase .project-description span {
+.showcase .project-description span {
   display: block;
   margin-bottom: 20px;
 }
 
+
 .projects-grid {
-  margin-bottom: 120px;
+  margin-bottom: 30px;
+}
+
+.projects-grid .project {
+  padding: 0 30px;
+  margin-bottom: 75px;
+}
+
+.projects-grid .project img {
+  margin-bottom: 30px;
+}
+
+.projects-grid .project .name {
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  color: #676767;
 }
 
 
 footer {
-
+  border-top: 1px solid #CECECE;
+  padding-top: 25px;
 }
 
-
-/* Coloring */
-
-body {
-  background-color: #f7f7f7;
+footer > div {
+  display: inline-block;
 }
 
-
-/* Support classes */
-
-.text {
-  line-height: 1.2;
-}
-
-.uppercase {
+footer .copyrights {
+  /* margin-left: 20px; */
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 50px;
   text-transform: uppercase;
+  color: #95989A;
+  cursor: default;
 }
 
-.bold {
-  font-weight: 600;
+footer .social-icons {
+  float: right;
+  text-align: right;
+}
+
+footer .social-icons a {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  margin-left: 10px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+  transition: transform 100ms;
+}
+
+footer .social-icons a:first-of-type {
+  margin-left: 0;
+}
+
+footer .social-icons a:hover {
+  /* transform: scale(1.1); */
+}
+
+footer .social-icons .github {
+  background-image: url(../icons/github.svg);
+}
+
+footer .social-icons .codepen {
+  background-image: url(../icons/codepen.svg);
+}
+
+footer .social-icons .email {
+  background-image: url(../icons/email.svg);
+}
+
+@media only screen and (max-width: 40em) {
+  header nav ul li {
+    margin-right: 20px;
+    padding-right: 0;
+    padding-left: 0;
+    font-size: 20px;
+  }
+
+  footer {
+    border-top: 0;
+  }
+
+  footer .social-icons {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  footer .social-icons a {
+    width: 80px;
+    height: 80px;
+  }
+
+  footer .copyrights {
+    text-align: center;
+  }
 }
