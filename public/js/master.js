@@ -1,10 +1,13 @@
 /**
- * (c)2016 codeams@gmail.com
+ * Project: codeams.me
+ * Author: codeams@gmail.com
+ * License: All rights reserved.
  */
+
 
 $(function() {
 
-	var timer = 15000
+	var timer = 20000
 	var palette = [ // Material
 		'#F44336', // Red 500
 		'#E91E63', // Pink 500
@@ -19,8 +22,8 @@ $(function() {
 	]
 
 
-	var $name = $( '.message strong' )
-	var $icons = $( '.social-icons .icon' )
+	var $name = $( '.name' )
+	var $icons = $( '.social-icons a' )
 
 	var updateColor = function() {
 		var randomIndex = Math.round( Math.random() * palette.length - 1 )

@@ -28,17 +28,13 @@ body {
   margin-bottom: 0;
 }
 
-.message strong {
-  color: inherit;
-}
-
 
 .social-icons {
   margin: 0 auto 30px;
   text-align: center;
 }
 
-.social-icons .icon {
+.social-icons a {
   display: inline-block;
   width: 100px;
   height: 100px;
@@ -50,24 +46,24 @@ body {
   border-radius: 50%;
 }
 
-.social-icons .icon.linkedin-icon,
-.social-icons .icon.github-icon {
+.social-icons .linkedin,
+.social-icons .github {
   background-size: 50px 50px;
 }
 
-.social-icons .icon:last-of-type {
+.social-icons a:last-of-type {
   margin-right: 0;
 }
 
-.social-icons .github-icon {
+.social-icons .github {
   background-image: url(../icons/github.svg);
 }
 
-.social-icons .codepen-icon {
+.social-icons .codepen {
   background-image: url(../icons/codepen.svg);
 }
 
-.social-icons .linkedin-icon {
+.social-icons .linkedin {
   background-image: url(../icons/linkedin.svg);
 }
 
@@ -77,7 +73,7 @@ body {
     font-size: 22px;
   }
 
-  .social-icons .icon {
+  .social-icons a {
     width: 70px;
     height: 70px;
   }
