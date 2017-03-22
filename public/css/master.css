@@ -1,0 +1,106 @@
+/**
+ * Project: codeams.me
+ * Author: codeams@gmail.com
+ * License: All rights reserved.
+ */
+
+
+body {
+  min-width: 400px;
+  padding-top: 85px;
+  background-color: white;
+  color: #95989a;
+}
+
+
+.signature {
+  width: 100%;
+  height: 100px;
+  margin-bottom: 50px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: auto 100%;
+  background-image: url(../illustrations/signature.svg);
+}
+
+
+.message {
+  width: 100%;
+  margin-bottom: 50px;
+  text-align: center;
+  font-size: 36px;
+}
+
+.message p {
+  margin-bottom: 30px;
+}
+
+.message p:last-of-type {
+  margin-bottom: 0;
+}
+
+.message strong {
+  font-weight: 700;
+  color: #4db6ac;
+}
+
+
+.social-icons {
+  margin: 0 auto 75px;
+  text-align: center;
+}
+
+.social-icons .icon {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  margin-right: 20px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 100% 100%;
+  background-color: #4db6ac;
+  border-radius: 100%;
+}
+
+.social-icons .icon:last-of-type {
+  margin-right: 0;
+}
+
+.social-icons .github-icon {
+  background-image: url(../icons/github.svg);
+}
+
+.social-icons .codepen-icon {
+  background-image: url(../icons/codepen.svg);
+}
+
+.social-icons .linkedin-icon {
+  background-image: url(../icons/linkedin.svg);
+}
+
+
+.copyrights {
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: 700;
+  color: #ddd;
+  cursor: default;
+}
+
+
+.popup {
+  display: none;
+}
+
+@media only screen and (max-width: 640px) {
+
+  .message {
+    font-size: 22px;
+  }
+
+  .social-icons .icon {
+    width: 70px;
+    height: 70px;
+  }
+
+}

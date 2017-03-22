@@ -1,106 +1,46 @@
 <!doctype html>
-<html lang='en'>
-  <head>
+<html><head>
 
-    <meta charset='utf-8'>
-    <title>Erick Montañez</title>
+  <meta charset='utf-8'>
+  <title>Erick Montañez</title>
 
-    <link rel='stylesheet' href='vendor/foundation.min.css'>
-    <link rel='stylesheet' href='css/styles.css'>
-    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Source+Code+Pro|Source+Sans+Pro:400,600,700'>
+  <link rel='stylesheet' href='css/normalize.css'>
+  <link rel='stylesheet' href='css/master.css'>
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700'>
 
-  </head>
-  <body>
+</head><body>
 
-    <div class='wrapper'>
+  <div class='container'>
 
-      <header>
+    <div class='signature'></div>
 
-        <div class='signature'></div>
-
-        <nav>
-          <ul>
-            <li class='active'><a href='works.html'>Works</a></li>
-            <li><a href='codeams.html'>Codeams</a></li>
-            <li><a href='skills.html'>Skills</a></li>
-          </ul>
-        </nav>
-
-      </header>
-
-
-      <section class='showcase'>
-
-        <div class='prev-button'></div>
-
-        <img draggable='false' class='imac' src='illustrations/imac.svg' />
-        <img draggable='false' class='screenshot' src='screenshots/astrosalsa-dashboard/0.png' />
-
-        <div class='project-description'>
-          <h1>Astrosalsa dashboard</h1>
-          <span class='client'>Astrosalsa social dancing</span>
-          <span class='technologies'>PHP, JS</span>
-          <span class='year'>2016</span>
-        </div>
-
-        <div class='next-button'></div>
-
-      </section>
-
-
-      <section class='projects-grid row small-up-1 medium-up-2'>
-
-        <div class='project column' id='astrosalsa-dashboard'>
-          <img src='screenshots/astrosalsa-dashboard/0.png' alt='Astrosalsa' />
-          <div class='name'>Astrosalsa dashboard</div>
-        </div>
-
-        <div class='project column' id='csspaceship'>
-          <img src='screenshots/csspaceship/0.png' alt='CSSpaceship' />
-          <div class='name'>CSSpaceship</div>
-        </div>
-
-        <div class='project column' id='congress'>
-          <img src='screenshots/congress/0.png' alt='Congress' />
-          <div class='name'>Congress</div>
-        </div>
-
-        <div class='project column' id='taskbin'>
-          <img src='screenshots/taskbin/0.png' alt='Taskbin' />
-          <div class='name'>Taskbin</div>
-        </div>
-
-        <div class='project column' id='zenzzer-template'>
-          <img src='screenshots/zenzzer-template/0.png' alt='Zenzzer' />
-          <div class='name'>Zenzzer template</div>
-        </div>
-
-        <div class='project column' id='grades'>
-          <img src='screenshots/grades/0.png' alt='Grades' />
-          <div class='name'>Grades</div>
-        </div>
-      </section>
-
-
-      <footer>
-
-        <div class='row'>
-          <div class='social-icons columns small-12 medium-6 medium-order-2'>
-            <a class='github' href='http://github.com/codeams/' target='_blank'></a>
-            <a class='codepen' href='http://codepen.com/codeams/' target='_blank'></a>
-            <a class='email' href='mailto:codeams@gmail.com'></a>
-          </div>
-          <div class='copyrights columns small-12 medium-6 medium-order-1'>
-            &copy;Erick Montañez
-          </div>
-        </div>
-
-      </footer>
-
+    <div class='message'>
+      <p><strong>Erick Montañez</strong> is a software engineering</p>
+      <p><span>student and web developer who thinks</span></p>
+      <p>that ocasionally talking in the third</p>
+      <p>person is an acceptable, necessary evil.</p>
     </div>
 
-    <script src='vendor/jquery.min.js'></script>
-    <script src='vendor/foundation.min.js'></script>
+    <div class='social-icons'>
+      <a class='icon github-icon' href='http://github.com/codeams' target='_blank'></a>
+      <a class='icon codepen-icon' href='http://codepen.io/codeams' target='_blank'></a>
+      <a class='icon linkedin-icon' href='http://linkedin.com/in/alejandro-montañez-03ba86136' target='_blank'></a>
+    </div>
 
-  </body>
-</html>
+    <div class='copyrights'>&copy;2016</div>
+
+  </div>
+
+  <div class='popup'>
+    <div class='picture'></div>
+    <div class='say-hello-banner'>
+      <div class='im-available-message'>I'm available for a project</div>
+      <div class='say-hello-button'>Say hello!</div>
+      <div class='maybe-later-button'>Maybe later</div>
+    </div>
+  </div>
+
+  <script src='vendor/jquery.min.js'></script>
+  <script src='js/master.js'></script>
+
+</body></html>
