@@ -5,19 +5,17 @@
 $(function() {
 
 	var timer = 15000
-	var palette = [
-		'#F44336',
-		'#E91E63',
-		'#7B1FA2',
-		'#673AB7',
-		'#3F51B5',
-		'#1976D2',
-		'#0288D1',
-		'#009688',
-		'#388E3C',
-		'#FF8F00',
-		'#F4511E',
-		'#546E7A'
+	var palette = [ // Material
+		'#F44336', // Red 500
+		'#E91E63', // Pink 500
+		'#673AB7', // Deep purple 500
+		'#3F51B5', // Indigo 500
+		'#2196F3', // Blue 500
+		'#009688', // Teal 500
+		'#4CAF50', // Green 500
+		'#CDDC39', // Lime 500
+		'#FFA000', // Amber 700
+		'#FF5722' // Deep orange 500
 	]
 
 
