@@ -69,6 +69,54 @@ body {
   background-image: url(../icons/linkedin.svg);
 }
 
+.top-right-corner,
+.bottom-left-corner {
+  position: absolute;
+  width: 70px;
+  height: 70px;
+}
+
+.top-right-corner {
+  top: 0;
+  right: 0;
+}
+
+.bottom-left-corner {
+  bottom: 0;
+  left: 0;
+}
+
+.top-right-corner::before,
+.top-right-corner::after,
+.bottom-left-corner::before,
+.bottom-left-corner::after {
+  display: block;
+  position: absolute;
+  content: '';
+  background-color: red;
+  opacity: 0.5;
+}
+
+.top-right-corner::before {
+  right: 0;
+}
+
+.bottom-left-corner::after {
+  bottom: 0;
+}
+
+.top-right-corner::before,
+.bottom-left-corner::before {
+  width: 25px;
+  height: 100%;
+}
+
+.top-right-corner::after,
+.bottom-left-corner::after {
+  width: 100%;
+  height: 25px;
+}
+
 
 @media only screen and (max-width: 640px) {
   .message {
