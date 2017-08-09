@@ -1,6 +1,6 @@
 # codeams.me
 
-> Codeams personal website.
+> Codeams personal website, remastered.
 
 ## Build Setup
 
