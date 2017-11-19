@@ -13,7 +13,7 @@
   top: 0;
   left: 0;
   padding: 40px 0 40px 70px;
-  font-size: 20px;
+  font-size: 18px;
 
   & * {
     cursor: default;
