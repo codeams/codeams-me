@@ -1,6 +1,9 @@
 <template>
   <div class='project'>
-    <div class='preview'></div>
+    <div class='cover row collapse align-middle align-center'>
+      <div class='preview'
+        :style='{ "background-image": `url(${ details.previewUrl })` }'></div>
+    </div>
 
     <div class='label'>
       <span class='name'>{{ details.name }}</span>
@@ -32,11 +35,19 @@ export default {
     margin-right: 70px;
   }
 
-  .preview {
+  .cover {
     width: 100%;
     height: 531px;
     background: get-color(teen-palenight);
     border-radius: 4px;
+
+    .preview {
+      width: 90%;
+      height: 90%;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+    }
   }
 
   .label {

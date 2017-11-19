@@ -17,17 +17,20 @@ export default {
         {
           id: 1,
           name: 'Warriors Lighthouse',
-          role: 'Vue development, UI design.'
+          role: 'Vue development, UI design.',
+          previewUrl: 'http://assets.app/warriors-lighthouse.png'
         },
         {
           id: 2,
           name: 'Semple',
-          role: 'iOS development, API design.'
+          role: 'iOS development, API design.',
+          previewUrl: 'http://assets.app/semple.png'
         },
         {
           id: 3,
           name: 'Kiiwik Landing',
-          role: 'Front-end development.'
+          role: 'Front-end development.',
+          previewUrl: 'http://assets.app/kiiwik-landing.png'
         }
       ]
     }
@@ -44,8 +47,11 @@ export default {
   position: absolute;
   top: 0;
   left: 0;
+
   width: 100%;
   height: 100%;
+  max-width: 100%;
+  max-height: 100%;
 
   overflow-x: scroll;
   overflow-y: hidden;
