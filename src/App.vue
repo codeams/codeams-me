@@ -1,13 +1,20 @@
 <template>
-  <div id="app">
-    <img src="./assets/images/logo.png">
-    <router-view/>
+  <div class='app'>
+    <viewport>
+
+    </viewport>
   </div>
 </template>
 
 <script>
+import Viewport from '@/components/Viewport'
+
 export default {
-  name: 'app'
+  name: 'app',
+
+  components: {
+    Viewport
+  }
 }
 </script>
 
@@ -17,8 +24,5 @@ export default {
 #app {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
 }
 </style>
