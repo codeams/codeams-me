@@ -14,8 +14,7 @@ export default {
 
 <style lang='scss'>
 .heading {
-  margin-top: 40px;
-  margin-left: 70px;
+  padding: 40px 0 40px 70px;
   font-size: 20px;
 
   .name {

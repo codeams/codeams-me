@@ -20,8 +20,9 @@ export default {
   .footing {
     z-index: 99;
     position: absolute;
-    left: 70px;
-    bottom: 40px;
+    left: 0;
+    bottom: 0;
+    padding: 40px 0 40px 70px;
 
     .copyright-notice {
       color: get-color(baby-palenight);
