@@ -1,6 +1,6 @@
 <template>
   <div class='footing'>
-    Footing
+    <span class='copyright-notice'>&copy;{{ currentYear }}</span>
   </div>
 </template>
 
@@ -9,7 +9,22 @@ export default {
   name: 'Footing',
 
   data () {
-    return {}
+    return {
+      currentYear: (new Date()).getFullYear()
+    }
   }
 }
 </script>
+
+<style lang='scss'>
+  .footing {
+    z-index: 99;
+    position: absolute;
+    left: 70px;
+    bottom: 40px;
+
+    .copyright-notice {
+      color: get-color(baby-palenight);
+    }
+  }
+</style>
