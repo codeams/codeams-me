@@ -1,9 +1,5 @@
 <template>
-  <div class='app'>
-    <viewport>
-
-    </viewport>
-  </div>
+  <viewport></viewport>
 </template>
 
 <script>
@@ -21,8 +17,14 @@ export default {
 <style lang='scss'>
 @import 'app';
 
-#app {
+html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  background: $white;
 }
 </style>
