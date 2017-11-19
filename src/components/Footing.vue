@@ -1,13 +1,13 @@
 <template>
   <div class='footing'>
-    <span class='copyright-notice'>&copy;{{ currentYear }}</span>
+    <span class='copyright'>
+      &copy;{{ currentYear }}
+    </span>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'Footing',
-
   data () {
     return {
       currentYear: (new Date()).getFullYear()
@@ -24,7 +24,7 @@ export default {
     bottom: 0;
     padding: 40px 0 40px 70px;
 
-    .copyright-notice {
+    .copyright {
       color: get-color(baby-palenight);
     }
   }

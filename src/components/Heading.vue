@@ -6,16 +6,18 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: 'Heading'
-}
-</script>
-
 <style lang='scss'>
 .heading {
+  z-index: 2;
+  position: absolute;
+  top: 0;
+  left: 0;
   padding: 40px 0 40px 70px;
   font-size: 20px;
+
+  & * {
+    cursor: default;
+  }
 
   .name {
     font-weight: bolder;

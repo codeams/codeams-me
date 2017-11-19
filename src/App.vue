@@ -1,13 +1,11 @@
 <template>
-  <viewport></viewport>
+  <viewport/>
 </template>
 
 <script>
 import Viewport from '@/components/Viewport'
 
 export default {
-  name: 'app',
-
   components: {
     Viewport
   }
