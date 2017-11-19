@@ -31,6 +31,12 @@ export default {
           name: 'Kiiwik Landing',
           role: 'Front-end development.',
           previewUrl: 'http://assets.app/kiiwik-landing.png'
+        },
+        {
+          id: 4,
+          name: 'Congress',
+          role: 'Vue development, UI & interaction design.',
+          previewUrl: 'http://assets.app/congress.png'
         }
       ]
     }
