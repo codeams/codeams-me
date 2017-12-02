@@ -1,5 +1,6 @@
 <template>
-  <div class='portfolio row collapse align-middle'>
+  <div @mousewheel='redirectVerticalScroll'
+    class='portfolio row collapse align-middle'>
     <div class='column'>
       <project v-for='(project, index) in projects'
         :details='projects[index]' :key='project.id' />
@@ -8,10 +9,16 @@
 </template>
 
 <script>
+// Mixins
+import RedirectsScroll from '@/mixins/RedirectsScroll'
+// Components
 import Project from '@/components/Project'
+// Data
 import projects from '@/data/projects'
 
 export default {
+  mixins: [RedirectsScroll],
+
   data () {
     return {
       projects
