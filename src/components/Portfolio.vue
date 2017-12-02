@@ -3,7 +3,7 @@
     class='portfolio row collapse align-middle'>
     <div class='column'>
       <project v-for='(project, index) in projects'
-        :details='projects[index]' :key='project.id' />
+        :instance='project' :key='project.id' />
     </div>
   </div>
 </template>

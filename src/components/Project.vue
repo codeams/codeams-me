@@ -2,20 +2,20 @@
   <div class='project'>
     <div class='cover row collapse align-middle align-center'>
       <div class='preview'
-        :style='{ "background-image": `url(${ details.previewUrl })` }'></div>
+        :style='{ "background-image": `url(${ instance.previewUrl })` }'></div>
     </div>
 
     <div class='label'>
-      <span class='name'>{{ details.name }}</span>
+      <span class='name'>{{ instance.name }}</span>
       <span class='dash'> — </span>
-      <span class='role'>{{ details.role }}</span>
+      <span class='role'>{{ instance.role }}</span>
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  props: ['details']
+  props: ['instance']
 }
 </script>
 
