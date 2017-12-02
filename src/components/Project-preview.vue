@@ -1,8 +1,7 @@
 <template>
   <div class='project'>
-    <div class='cover row collapse align-middle align-center'>
-      <div class='preview'
-        :style='{ "background-image": `url(${ instance.previewUrl })` }'></div>
+    <div class='capture-container'>
+      <project-capture :url='instance.previewUrl' />
     </div>
 
     <div class='label'>
@@ -14,8 +13,14 @@
 </template>
 
 <script>
+import ProjectCapture from '@/components/Project-capture'
+
 export default {
-  props: ['instance']
+  props: ['instance'],
+
+  components: {
+    ProjectCapture
+  }
 }
 </script>
 
@@ -35,19 +40,9 @@ export default {
     margin-right: 70px;
   }
 
-  .cover {
+  .capture-container {
     width: 100%;
     height: 431px;
-    background: get-color(teen-palenight);
-    border-radius: 4px;
-
-    .preview {
-      width: 90%;
-      height: 90%;
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: contain;
-    }
   }
 
   .label {
