@@ -1,6 +1,6 @@
 # codeams.me
 
-> Codeams personal website, remastered.
+> Codeams' personal portfolio.
 
 ## Build Setup
 
@@ -31,4 +31,4 @@ yarn test
 
 This repository uses the [codeams/vuepack](http://github.com/codeams/vuepack) template.
 
-For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+For a detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
