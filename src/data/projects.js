@@ -3,7 +3,7 @@ import Project from '@/models/Project'
 
 let projects = [
   {
-    id: 1,
+    id: 'warriors-lighthouse',
     type: 'Personal project',
     name: 'Warriors Lighthouse',
     role: 'Vue development, UI design.',
@@ -20,19 +20,19 @@ let projects = [
     ]
   },
   {
-    id: 2,
+    id: 'semple',
     name: 'Semple',
     role: 'iOS development, API design.',
     captures: ['http://assets.app/semple.png']
   },
   {
-    id: 3,
+    id: 'kiiwik-landing',
     name: 'Kiiwik Landing',
     role: 'Front-end development.',
     captures: ['http://assets.app/kiiwik-landing.png']
   },
   {
-    id: 4,
+    id: 'congress',
     name: 'Congress',
     role: 'Vue development, UI & interaction design.',
     captures: ['http://assets.app/congress.png']

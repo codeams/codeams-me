@@ -28,7 +28,7 @@ export default {
 
   methods: {
     selectInstanceFromRouteParams () {
-      const projectId = parseInt(this.$route.params.id)
+      const projectId = this.$route.params.id
       const instance = projects.find(x => x.id === projectId)
       this.instance = instance
     }
