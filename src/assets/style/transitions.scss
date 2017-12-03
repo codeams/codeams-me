@@ -1,0 +1,14 @@
+
+.fade-enter-active, .fade-leave-active {
+  transition-property: opacity;
+  transition-duration: 350ms;
+}
+
+.fade-enter-active {
+  transition-delay: 350ms;
+  transition-timing-function: ease-out;
+}
+
+.fade-enter, .fade-leave-active {
+  opacity: 0
+}

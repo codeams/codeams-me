@@ -1,7 +1,9 @@
 <template>
   <div class='viewport'>
     <heading/>
-    <router-view/>
+    <transition name='fade'>
+      <router-view/>
+    </transition>
     <footing/>
   </div>
 </template>
@@ -19,6 +21,8 @@ export default {
 </script>
 
 <style lang='scss'>
+@import '~assets/style/transitions';
+
 .viewport {
   // Sizing
   z-index: 1;
