@@ -22,13 +22,25 @@ import projects from '@/data/projects'
 export default {
   data () {
     return {
-      instance: projects.find(x => x.id === parseInt(this.$route.params.id))
+      instance: undefined
     }
+  },
+
+  methods: {
+    selectInstanceFromRouteParams () {
+      const projectId = parseInt(this.$route.params.id)
+      const instance = projects.find(x => x.id === projectId)
+      this.instance = instance
+    }
+  },
+
+  beforeMount () {
+    this.selectInstanceFromRouteParams()
   },
 
   watch: {
     '$route.params.id' () {
-      this.instance = projects.find(x => x.id === parseInt(this.$route.params.id))
+      this.selectInstanceFromRouteParams()
     }
   },
 
