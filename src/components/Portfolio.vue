@@ -28,7 +28,7 @@ export default {
 
   methods: {
     redirectToProject (projectId) {
-      this.$router.push(`project/${ projectId }`)
+      this.$router.push(`project/${projectId}`)
     }
   },
 
