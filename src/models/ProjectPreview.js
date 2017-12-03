@@ -4,6 +4,6 @@ export default class ProjectPreview {
     this.id = attributes.id || 0
     this.name = attributes.name || 'Unknown'
     this.role = attributes.role || 'Unknown'
-    this.previewUrl = attributes.previewUrl || ''
+    this.cover = attributes.cover || ''
   }
 }

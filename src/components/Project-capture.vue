@@ -1,10 +1,6 @@
 <template>
-  <div class='project-capture'>
-    <div class='cover row collapse align-middle align-center'>
-      <div class='image'
-        :style='{ "background-image": `url(${ url })` }'>
-      </div>
-    </div>
+  <div class='project-capture'
+    :style='{ "background-image": `url(${ url })` }'>
   </div>
 </template>
 
@@ -17,23 +13,14 @@ export default {
 <style lang='scss'>
 .project-capture {
   width: 100%;
-  height: 100%;
-  
-  .cover {
-    width: 100%;
-    height: 100%;
-    background: get-color(teen-palenight);
-    border-radius: 4px;
-  }
+  height: 0px;
+  padding-top: calc(100% * 0.865);
 
-  .image {
-    width: 90%;
-    height: 90%;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-  }
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 90% 90%;
+  background-color: get-color(teen-palenight);
+
+  border-radius: 4px;
 }
 </style>
-
-

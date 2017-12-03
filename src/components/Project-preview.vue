@@ -1,7 +1,7 @@
 <template>
   <div class='project'>
     <div class='capture-container'>
-      <project-capture :url='instance.previewUrl' />
+      <project-capture :url='instance.cover' />
     </div>
 
     <div class='label'>
