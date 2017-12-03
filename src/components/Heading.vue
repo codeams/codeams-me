@@ -1,6 +1,8 @@
 <template>
   <div class='heading'>
-    <span class='name'>Erick A. Montañez</span>
+    <span class='name' @click='$router.push({ name: "Portfolio" })'>
+      Erick A. Montañez
+    </span>
     <span class='dash'> — </span>
     <span class='ocupation'>software engineer, web & iOS developer</span>
   </div>
@@ -22,6 +24,7 @@
   .name {
     font-weight: bolder;
     color: get-color(white);
+    cursor: pointer;
   }
 
   .dash,
