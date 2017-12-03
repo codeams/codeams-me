@@ -31,6 +31,7 @@ export default {
   display: inline-block;
   width: 508px;
   margin-left: 15px;
+  cursor: pointer;
 
   &:first-of-type {
     margin-left: 70px;

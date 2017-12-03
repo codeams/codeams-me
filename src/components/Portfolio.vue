@@ -3,7 +3,8 @@
     class='portfolio row collapse align-middle'>
     <div class='column'>
       <project-preview v-for='project in projects'
-        :instance='project.preview' :key='project.id' />
+        :instance='project.preview' :key='project.id'
+        @click.native='redirectToProject(project.id)' />
     </div>
   </div>
 </template>
@@ -22,6 +23,12 @@ export default {
   data () {
     return {
       projects
+    }
+  },
+
+  methods: {
+    redirectToProject (projectId) {
+      this.$router.push(`project/${ projectId }`)
     }
   },
 
