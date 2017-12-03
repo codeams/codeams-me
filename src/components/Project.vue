@@ -1,66 +1,77 @@
 <template>
-  <div class='project'>
-    <div class='cover row collapse align-middle align-center'>
-      <div class='preview'
-        :style='{ "background-image": `url(${ details.previewUrl })` }'></div>
+  <div v-if='instance' class='project row align-justify'>
+    <div class='technical-card-container'>
+      <project-technical-card :project='instance' />
     </div>
-
-    <div class='label'>
-      <span class='name'>{{ details.name }}</span>
-      <span class='dash'> — </span>
-      <span class='role'>{{ details.role }}</span>
+    <div class='captures-list-container column'>
+      <project-captures-list :project='instance' />
     </div>
+  </div>
+  <div v-else class='project not-found row align-middle'>
+    Project not found :(
   </div>
 </template>
 
 <script>
+// Components
+import ProjectTechnicalCard from '@/components/Project-technical-card'
+import ProjectCapturesList from '@/components/Project-captures-list'
+// Data
+import projects from '@/data/projects'
+
 export default {
-  props: ['details']
+  data () {
+    return {
+      instance: projects.find(x => x.id === parseInt(this.$route.params.id))
+    }
+  },
+
+  watch: {
+    '$route.params.id' () {
+      this.instance = projects.find(x => x.id === parseInt(this.$route.params.id))
+    }
+  },
+
+  components: {
+    ProjectTechnicalCard,
+    ProjectCapturesList
+  }
 }
 </script>
 
-<style lang='scss' scoped>
-// TODO: Refactor to use dinamic height
-
+<style lang='scss'>
 .project {
-  display: inline-block;
-  width: 508px;
-  margin-left: 15px;
+  position: absolute;
+  top: 0;
+  left: 0;
 
-  &:first-of-type {
-    margin-left: 70px;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+
+  .technical-card-container {
+    overflow: hidden;
+    width: 400px;
+    height: 100%;
+    padding-left: 67px;
+    box-sizing: content-box;
   }
 
-  &:last-of-type {
-    margin-right: 70px;
-  }
-
-  .cover {
+  .captures-list-container {
     width: 100%;
-    height: 431px;
-    background: get-color(teen-palenight);
-    border-radius: 4px;
+    height: 100%;
+    max-width: 870px;
 
-    .preview {
-      width: 90%;
-      height: 90%;
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: contain;
-    }
+    padding: 0 62px 0 162px;
   }
+}
 
-  .label {
-    margin-top: 27px;
-    color: get-color(white);
-
-    .name {
-      font-weight: bold;
-    }
-
-    .role {
-      font-style: italic;
-    }
-  }
+.project.not-found {
+  height: 100%;
+  padding-left: 67px;
+  font-weight: bold;
+  font-size: 30px;
+  text-transform: uppercase;
 }
 </style>

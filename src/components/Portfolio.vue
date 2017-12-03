@@ -2,17 +2,17 @@
   <div @mousewheel='redirectVerticalScroll'
     class='portfolio row collapse align-middle'>
     <div class='column'>
-      <project v-for='(project, index) in projects'
-        :details='projects[index]' :key='project.id' />
+      <project-preview v-for='project in projects'
+        :instance='project.preview' :key='project.id' />
     </div>
   </div>
 </template>
 
 <script>
 // Mixins
-import RedirectsScroll from '@/mixins/RedirectsScroll'
+import RedirectsScroll from '@/mixins/Redirects-scroll'
 // Components
-import Project from '@/components/Project'
+import ProjectPreview from '@/components/Project-preview'
 // Data
 import projects from '@/data/projects'
 
@@ -26,7 +26,7 @@ export default {
   },
 
   components: {
-    Project
+    ProjectPreview
   }
 }
 </script>
