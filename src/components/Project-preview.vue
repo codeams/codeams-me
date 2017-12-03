@@ -1,5 +1,5 @@
 <template>
-  <div class='project'>
+  <div class='project-preview'>
     <div class='capture-container'>
       <project-capture :url='instance.cover' />
     </div>
@@ -27,7 +27,7 @@ export default {
 <style lang='scss' scoped>
 // TODO: Refactor to use dinamic height
 
-.project {
+.project-preview {
   display: inline-block;
   width: 508px;
   margin-left: 15px;
