@@ -4,7 +4,7 @@
       Erick A. Montañez
     </span>
     <span class='dash'> — </span>
-    <span class='ocupation'>software engineer, web & iOS developer</span>
+    <span class='ocupation'>software engineer, web &amp; iOS developer</span>
   </div>
 </template>
 
