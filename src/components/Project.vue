@@ -75,7 +75,8 @@ export default {
     height: 100%;
     max-width: 870px;
 
-    padding: 0 62px 0 162px;
+    padding-right: 60px;
+    padding-left: 110px;
   }
 }
 
