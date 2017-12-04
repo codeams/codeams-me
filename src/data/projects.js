@@ -7,22 +7,27 @@ let projects = [
     type: 'Personal project',
     name: 'Warriors Lighthouse',
     role: 'Vue development, UI design.',
-    story: 'I did UI design using Adobe Experience Design and  development of a SPA using Vue. The main idea for this project was to enforce the rigurosity and quiality of the process of the Warriors company.',
+    story: 'I did SPA development using Vue and UI design using Adobe Experience Design. The main idea of the project was to increase the quality of Warriors company processes and reduce the number of human errors.',
     collabs: ['isisnaomi'],
     startDate: 'March 2017',
     endDate: 'October 2017',
     captures: [
       'http://assets.app/warriors-lighthouse.png',
+      'http://assets.app/warriors-lighthouse-2.png',
       'http://assets.app/warriors-lighthouse.png',
+      'http://assets.app/warriors-lighthouse-2.png',
       'http://assets.app/warriors-lighthouse.png',
+      'http://assets.app/warriors-lighthouse-2.png',
       'http://assets.app/warriors-lighthouse.png',
-      'http://assets.app/warriors-lighthouse.png'
+      'http://assets.app/warriors-lighthouse-2.png'
     ]
   },
   {
     id: 'semple',
+    type: 'Yellowme Project',
     name: 'Semple',
     role: 'iOS development, API design.',
+    story: '',
     captures: ['http://assets.app/semple.png']
   },
   {
