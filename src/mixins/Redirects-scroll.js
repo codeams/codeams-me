@@ -6,8 +6,6 @@
 //  Copyright © 2017 Codeams. All rights reserved.
 //
 
-const speedFactor = 0.4 // The scroll amount multiplier
-
 const RedirectsScroll = {
   methods: {
     redirectVerticalScroll ($event) {
@@ -15,8 +13,8 @@ const RedirectsScroll = {
       const isVerticalScroll = $event.deltaY
       const delta = isVerticalScroll ? $event.deltaY : $event.deltaX
 
-      target.scrollLeft += (delta * speedFactor)
-      $event.preventDefault()
+      target.scrollLeft += delta
+      if (isVerticalScroll) $event.preventDefault()
     }
   }
 }

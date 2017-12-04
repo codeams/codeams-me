@@ -10,7 +10,6 @@ const AbsorbesScroll = {
   beforeMount () {
     window.addEventListener('mousewheel', (event) => {
       this.$el.scrollTop += event.deltaY
-      event.preventDefault()
     })
   }
 }
