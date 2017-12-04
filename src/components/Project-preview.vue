@@ -7,7 +7,7 @@
     <div class='label'>
       <span class='name'>{{ instance.name }}</span>
       <span class='dash'> — </span>
-      <span class='role'>{{ instance.role }}</span>
+      <span class='role'>{{ instance.role }}.</span>
     </div>
   </div>
 </template>
