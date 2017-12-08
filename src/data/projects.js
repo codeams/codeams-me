@@ -7,7 +7,7 @@ let projects = [
     type: 'Personal project',
     name: 'Warriors Lighthouse',
     role: 'Vue development, UI design',
-    story: 'I did SPA development using Vue and UI design using Adobe Experience Design. The main idea of the project was to increase the quality of Warriors company processes and reduce the number of human errors.',
+    story: 'I did web development using Vue and UI design using Adobe Experience Design. The main idea of the project was to increase the quality of the company processes by reducing the number of human errors.',
     collabs: ['isisnaomi'],
     startDate: 'March 2017',
     endDate: 'October 2017',
