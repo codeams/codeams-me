@@ -19,7 +19,9 @@
         </div>
 
         <div class='dates-interval'>
-          from <strong>{{ project.startDate }}</strong> to <strong>{{ project.endDate }}</strong>
+          from <strong>{{ project.startDate }}</strong>
+          <span> to </span>
+          <strong>{{ project.endDate }}</strong>
         </div>
       </div>
     </div>
@@ -45,7 +47,7 @@ export default {
     font-size: 24px;
     text-transform: uppercase;
     letter-spacing: 1px;
-    color: rgba(159, 182, 193, 0.3);
+    color: #606C80;
     margin-bottom: 10px;
   }
 
@@ -71,11 +73,11 @@ export default {
     width: 42px;
     height: 1px;
     margin-bottom: 13px;
-    background:  hsl(0, 0%, 100%);
+    background:  #606C80;
   }
   
   .footer {
-    color: #9fb6c1;
+    color: #606C80;
   }
 
   .collabs {
