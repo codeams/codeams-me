@@ -1,10 +1,11 @@
 <template>
   <div class='heading'>
-    <span class='name' @click='$router.push({ name: "Portfolio" })'>
+    <div class='name' @click='$router.push({ name: "Portfolio" })'>
       Erick A. Montañez
+    </div>
+    <span class='ocupation'>
+      I’m a software engineer, web &amp; iOS developer… 
     </span>
-    <span class='dash'> — </span>
-    <span class='ocupation'>software engineer, web &amp; iOS developer</span>
   </div>
 </template>
 
@@ -27,9 +28,8 @@
     cursor: pointer;
   }
 
-  .dash,
   .ocupation {
-    color: get-color(baby-palenight);
+    font-style: italic;
   }
 }
 </style>

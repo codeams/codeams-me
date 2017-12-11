@@ -4,18 +4,15 @@
     <transition name='fade'>
       <router-view/>
     </transition>
-    <footing/>
   </div>
 </template>
 
 <script>
 import Heading from '@/components/Heading'
-import Footing from '@/components/Footing'
 
 export default {
   components: {
-    Heading,
-    Footing
+    Heading
   }
 }
 </script>
