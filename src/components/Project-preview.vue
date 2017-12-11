@@ -30,7 +30,7 @@ export default {
 .project-preview {
   display: inline-block;
   width: 508px;
-  margin-left: 15px;
+  margin-left: 25px;
   cursor: pointer;
 
   &:first-of-type {
