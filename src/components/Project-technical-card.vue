@@ -19,9 +19,14 @@
         </div>
 
         <div class='dates-interval'>
-          from <strong>{{ project.startDate }}</strong>
-          <span> to </span>
-          <strong>{{ project.endDate }}</strong>
+          <div v-if='project.startDate === project.endDate'>
+            around <strong>{{ project.startDate }}</strong>
+          </div>
+          <div v-else>
+            from <strong>{{ project.startDate }}</strong>
+            <span> to </span>
+            <strong>{{ project.endDate }}</strong>
+          </div>
         </div>
       </div>
     </div>
