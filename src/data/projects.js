@@ -19,6 +19,22 @@ let projects = [
     ]
   },
   {
+    id: 'kiiwik-landing',
+    type: 'YellowMe Project',
+    name: 'Kiiwik Landing',
+    role: 'Front-end development',
+    story: 'I did front-end web development using Bootstrap. This project was an effort of the Kiiwik team to share the idea behind the project and communicate the security and personality the app has to offer.',
+    collabs: ['giocervera'],
+    startDate: 'June 2017',
+    endDate: 'June 2017',
+    captures: [
+      'http://assets.app/kiiwik/1.png',
+      'http://assets.app/kiiwik/2.png',
+      'http://assets.app/kiiwik/3.png',
+      'http://assets.app/kiiwik/4.png'
+    ]
+  },
+  {
     id: 'astrosalsa-dashboard',
     type: 'Personal project',
     name: 'Astrosalsa Dashboard',
@@ -33,12 +49,6 @@ let projects = [
       'http://assets.app/astrosalsa/3.png',
       'http://assets.app/astrosalsa/4.png'
     ]
-  },
-  {
-    id: 'kiiwik-landing',
-    name: 'Kiiwik Landing',
-    role: 'Front-end development',
-    captures: ['http://assets.app/kiiwik-landing.png']
   },
   {
     id: 'congress',
