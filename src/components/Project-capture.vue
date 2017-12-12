@@ -41,7 +41,7 @@ export default {
   }
 
   .image.clickable {
-    transition: transform 200ms;
+    transition: transform 1s;
     cursor: pointer;
 
     &:hover {
