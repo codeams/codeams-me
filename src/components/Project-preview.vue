@@ -1,7 +1,7 @@
 <template>
   <div class='project-preview'>
     <div class='capture-container'>
-      <project-capture :url='instance.cover' />
+      <project-capture :url='instance.cover' clickable />
     </div>
 
     <div class='label'>
@@ -31,7 +31,6 @@ export default {
   display: inline-block;
   width: 508px;
   margin-left: 25px;
-  cursor: pointer;
 
   &:first-of-type {
     margin-left: 70px;

@@ -1,6 +1,6 @@
 <template>
   <div class='project-capture'>
-    <div class='image'
+    <div class='image' :class='{ "clickable": clickable }'
       :style='{ "background-image": `url(${ url })` }'>
     </div>
   </div>
@@ -8,7 +8,13 @@
 
 <script>
 export default {
-  props: ['url']
+  props: {
+    url: {
+      type: String,
+      required: true
+    },
+    clickable: Boolean
+  }
 }
 </script>
 
@@ -20,6 +26,7 @@ export default {
   padding-top: calc(100% * 0.865);
   border-radius: 4px;
   overflow: hidden;
+  background-color: #282939;
 
   .image {
     position: absolute;
@@ -31,6 +38,15 @@ export default {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+  }
+
+  .image.clickable {
+    transition: transform 200ms;
+    cursor: pointer;
+
+    &:hover {
+      transform: rotate(1deg);
+    }
   }
 }
 </style>
