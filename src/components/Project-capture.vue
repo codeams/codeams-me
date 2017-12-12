@@ -18,20 +18,19 @@ export default {
   width: 100%;
   height: 0px;
   padding-top: calc(100% * 0.865);
-
-  background-color: get-color(teen-palenight);
   border-radius: 4px;
+  overflow: hidden;
 
   .image {
     position: absolute;
-    top: 5%;
-    left: 5%;
-    width: 90%;
-    height: 90%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 
     background-repeat: no-repeat;
     background-position: center;
-    background-size: contain;
+    background-size: cover;
   }
 }
 </style>

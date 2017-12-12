@@ -12,23 +12,27 @@ let projects = [
     startDate: 'March 2017',
     endDate: 'October 2017',
     captures: [
-      'http://assets.app/warriors-lighthouse.png',
-      'http://assets.app/warriors-lighthouse-2.png',
-      'http://assets.app/warriors-lighthouse.png',
-      'http://assets.app/warriors-lighthouse-2.png',
-      'http://assets.app/warriors-lighthouse.png',
-      'http://assets.app/warriors-lighthouse-2.png',
-      'http://assets.app/warriors-lighthouse.png',
-      'http://assets.app/warriors-lighthouse-2.png'
+      'http://assets.app/warriors/1.png',
+      'http://assets.app/warriors/2.png',
+      'http://assets.app/warriors/3.png',
+      'http://assets.app/warriors/4.png'
     ]
   },
   {
-    id: 'semple',
-    type: 'Yellowme Project',
-    name: 'Semple',
-    role: 'iOS development, API design',
-    story: '',
-    captures: ['http://assets.app/semple.png']
+    id: 'astrosalsa-dashboard',
+    type: 'Personal project',
+    name: 'Astrosalsa Dashboard',
+    role: 'Web development, UI design',
+    story: 'I did web development using jQuery & PHP and UI design using Adobe Photoshop. The purpose of the project was to allow Astrosalsa to recover control over payments, classes access and accounting.',
+    collabs: ['isisnaomi'],
+    startDate: 'August 2016',
+    endDate: 'January 2017',
+    captures: [
+      'http://assets.app/astrosalsa/1.png',
+      'http://assets.app/astrosalsa/2.png',
+      'http://assets.app/astrosalsa/3.png',
+      'http://assets.app/astrosalsa/4.png'
+    ]
   },
   {
     id: 'kiiwik-landing',
