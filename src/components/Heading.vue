@@ -4,7 +4,7 @@
       Erick A. Montañez
     </div>
     <span class='ocupation'>
-      I’m a software engineer, web &amp; iOS developer… 
+      Software engineer, web and iOS developer.
     </span>
   </div>
 </template>
@@ -16,20 +16,22 @@
   top: 0;
   left: 0;
   padding: 40px 0 40px 70px;
-  font-size: 18px;
+  font-family: 'Fira Sans';
 
   & * {
     cursor: default;
   }
 
   .name {
-    font-weight: bolder;
+    font-size: 20px;
+    font-weight: bold;
     color: get-color(white);
     cursor: pointer;
   }
 
   .ocupation {
-    font-style: italic;
+    font-size: 18px;
+    font-weight: lighter;
   }
 }
 </style>
