@@ -3,9 +3,11 @@
     <div class='name' @click='$router.push({ name: "Portfolio" })'>
       Erick A. Montañez
     </div>
-    <span class='ocupation'>
-      Software engineer, web and iOS developer.
-    </span>
+    <transition name='fade'>
+      <span class='ocupation' v-if='$route.name === "Portfolio"'>
+        Software engineer, web and iOS developer
+      </span>
+    </transition>
   </div>
 </template>
 
@@ -16,7 +18,6 @@
   top: 0;
   left: 0;
   padding: 40px 0 40px 70px;
-  font-family: 'Fira Sans', $body-font-family;
 
   & * {
     cursor: default;
@@ -27,11 +28,13 @@
     font-weight: bold;
     color: get-color(white);
     cursor: pointer;
+    letter-spacing: -0.16px;
   }
 
   .ocupation {
     font-size: 18px;
-    font-weight: lighter;
+    font-style: italic;
+    letter-spacing: -0.12px;
   }
 }
 </style>

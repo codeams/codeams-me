@@ -52,37 +52,40 @@ export default {
     font-size: 24px;
     text-transform: uppercase;
     letter-spacing: 1px;
-    color: #606C80;
+    color: #606280;
     margin-bottom: 10px;
   }
 
   .name {
     font-size: 36px;
     font-weight: bold;
-    letter-spacing: -1px;
+    letter-spacing: -0.24px;
     text-transform: uppercase;
   }
 
   .role {
-    font-size: 20px;
     margin-bottom: 160px;
+    font-size: 20px;
+    font-style: italic;
   }
 
   .story {
-    font-size: 18px;
-    line-height: 1.5;
     margin-bottom: 50px;
+    font-size: 18px;
+    font-family: 'Source Sans Pro', $body-font-family;
+    line-height: 1.5;
   }
 
   .separator {
     width: 42px;
     height: 1px;
     margin-bottom: 13px;
-    background:  #606C80;
+    background:  #606280;
   }
   
   .footer {
-    color: #606C80;
+    font-style: italic;
+    color: #606280;
   }
 
   .collabs {

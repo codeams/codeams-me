@@ -35,9 +35,9 @@ let projects = [
     ]
   },
   {
-    id: 'astrosalsa-dashboard',
+    id: 'astro-dashboard',
     type: 'Personal project',
-    name: 'Astrosalsa Dashboard',
+    name: 'Astro Dashboard',
     role: 'Web development, UI design',
     story: 'I did web development using jQuery & PHP and UI design using Adobe Photoshop. The purpose of the project was to allow Astrosalsa to recover control over payments, classes access and accounting.',
     collabs: ['isisnaomi'],

@@ -7,7 +7,7 @@
     <div class='label'>
       <span class='name'>{{ instance.name }}</span>
       <span class='dash'> — </span>
-      <span class='role'>{{ instance.role }}.</span>
+      <span class='role'>{{ instance.role }}</span>
     </div>
   </div>
 </template>
@@ -47,14 +47,11 @@ export default {
 
   .label {
     margin-top: 27px;
+    font-style: italic;
     color: get-color(white);
 
     .name {
       font-weight: bold;
-    }
-
-    .role {
-      font-style: italic;
     }
   }
 }

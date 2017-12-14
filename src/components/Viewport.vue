@@ -4,15 +4,18 @@
     <transition name='fade'>
       <router-view/>
     </transition>
+    <footing/>
   </div>
 </template>
 
 <script>
 import Heading from '@/components/Heading'
+import Footing from '@/components/Footing'
 
 export default {
   components: {
-    Heading
+    Heading,
+    Footing
   }
 }
 </script>
@@ -30,7 +33,10 @@ export default {
   height: 100%;
 
   // Styling
-  background: get-color(palenight);
+  // background: get-color(palenight);
+  /* Rectangle 2: */
+  /* Rectangle 2: */
+  background-image: radial-gradient(farthest-corner at 0px 0px, #323459 0%, #16182B 100%);
   color: get-color(white);
 }
 </style>

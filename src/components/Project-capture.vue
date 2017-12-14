@@ -36,10 +36,10 @@ export default {
   position: relative;
   width: 100%;
   height: 0px;
-  padding-top: calc(100% * 0.865);
+  padding-top: calc(100% * 0.84555);
   border-radius: 4px;
   overflow: hidden;
-  background-color: #282939;
+  background-color: rgba(get-color(white), 0.02);
 }
 
 .project-capture .image {
