@@ -2,7 +2,7 @@
   <div class='project-capture' :class='{ "loading": loading }'>
     <div class='image' :class='{ "clickable": clickable }'>
       <loader />
-      <img :src='url' />
+      <img :src='url' @load='loading = false' />
     </div>
   </div>
 </template>
@@ -23,13 +23,6 @@ export default {
     return {
       loading: true
     }
-  },
-
-  mounted () {
-    const image = this.$el.querySelector('img')
-    image.addEventListener('load', () => {
-      this.loading = false
-    })
   },
 
   components: {
