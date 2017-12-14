@@ -49,12 +49,6 @@ let projects = [
       'http://assets.app/astrosalsa/3.png',
       'http://assets.app/astrosalsa/4.png'
     ]
-  },
-  {
-    id: 'congress',
-    name: 'Congress',
-    role: 'Vue development, UI & interaction design',
-    captures: ['http://assets.app/congress.png']
   }
 ]
 
