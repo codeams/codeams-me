@@ -39,8 +39,6 @@ export default {
 </script>
 
 <style lang='scss'>
-@import '~assets/style/animations';
-
 .project-capture {
   position: relative;
   width: 100%;
