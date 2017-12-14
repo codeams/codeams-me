@@ -1,12 +1,15 @@
 <template>
-  <div class='project-capture'>
-    <div class='image' :class='{ "clickable": clickable }'
-      :style='{ "background-image": `url(${ url })` }'>
+  <div class='project-capture' :class='{ "loading": loading }'>
+    <div class='image' :class='{ "clickable": clickable }'>
+      <loader />
+      <img :src='url' />
     </div>
   </div>
 </template>
 
 <script>
+import Loader from '@/components/Loader'
+
 export default {
   props: {
     url: {
@@ -14,11 +17,30 @@ export default {
       required: true
     },
     clickable: Boolean
+  },
+
+  data () {
+    return {
+      loading: true
+    }
+  },
+
+  mounted () {
+    const image = this.$el.querySelector('img')
+    image.addEventListener('load', () => {
+      this.loading = false
+    })
+  },
+
+  components: {
+    Loader
   }
 }
 </script>
 
 <style lang='scss'>
+@import '~assets/style/animations';
+
 .project-capture {
   position: relative;
   width: 100%;
@@ -27,26 +49,44 @@ export default {
   border-radius: 4px;
   overflow: hidden;
   background-color: #282939;
+}
 
-  .image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+.project-capture .image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-  }
-
-  .image.clickable {
+  &.clickable {
     transition: transform 1s;
     cursor: pointer;
 
     &:hover {
       transform: rotate(1deg);
     }
+  }
+}
+
+.project-capture {
+  .loader {
+    opacity: 0;
+    transition: opacity 0.5s;
+  }
+
+  img {
+    opacity: 1;
+    transition: opacity 2s;
+  }
+}
+
+.project-capture.loading {
+  .loader {
+    opacity: 1;
+  }
+
+  img {
+    opacity: 0;
   }
 }
 </style>
