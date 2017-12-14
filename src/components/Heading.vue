@@ -16,7 +16,7 @@
   top: 0;
   left: 0;
   padding: 40px 0 40px 70px;
-  font-family: 'Fira Sans';
+  font-family: 'Fira Sans', $body-font-family;
 
   & * {
     cursor: default;
