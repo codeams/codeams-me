@@ -35,7 +35,7 @@ export default {
 }
 
 .dot {
-  transform: scale(3);
+  transform: scale(2.5);
   position: absolute;
   top: 50%;
   left: 50%;
@@ -49,7 +49,7 @@ export default {
 
   border-radius: 5px;
 
-  background-color: rgba(255, 255, 255, 0.01);
+  background-color: rgba(255, 255, 255, 0.03);
 
   transform-type: preserve-3d;
 
@@ -67,7 +67,7 @@ export default {
   
   border-radius: 3px;
   
-  background-color: rgba(255, 255, 255, 0.01);
+  background-color: rgba(255, 255, 255, 0.03);
   
   animation-name: dot2;
 }
