@@ -33,10 +33,7 @@ export default {
   height: 100%;
 
   // Styling
-  // background: get-color(palenight);
-  /* Rectangle 2: */
-  /* Rectangle 2: */
-  background-image: radial-gradient(farthest-corner at 0px 0px, #323459 0%, #16182B 100%);
+  background-image: radial-gradient(farthest-corner at center right, #3C465F 15%, #19213D 80%); // 3C465F, 19213D
   color: get-color(white);
 }
 </style>
