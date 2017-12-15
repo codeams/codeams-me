@@ -39,7 +39,7 @@ export default {
   padding-top: calc(100% * 0.84555);
   border-radius: 4px;
   overflow: hidden;
-  background-color: rgba(get-color(white), 0.02);
+  background-color: rgba(get-color(white), 0.05);
 }
 
 .project-capture .image {
