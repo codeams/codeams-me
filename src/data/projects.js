@@ -40,7 +40,7 @@ let projects = [
     name: 'Astro Dashboard',
     role: 'Web development, UI design',
     story: 'I did web development using jQuery & PHP and UI design using Adobe Photoshop. The purpose of the project was to allow Astrosalsa to recover control over payments, classes access and accounting.',
-    collabs: ['isisnaomi'],
+    collabs: ['isisnaomi', 'davidhernandeze'],
     startDate: 'August 2016',
     endDate: 'January 2017',
     captures: [
