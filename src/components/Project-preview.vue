@@ -13,15 +13,15 @@ import Project from '@/models/Project'
 import ProjectCapture from '@/components/Project-capture'
 
 export default {
+  components: {
+    ProjectCapture
+  },
+
   props: {
     project: {
       type: Project,
       required: true
     }
-  },
-
-  components: {
-    ProjectCapture
   }
 }
 </script>

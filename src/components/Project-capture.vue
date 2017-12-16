@@ -9,6 +9,10 @@
 import Loader from '@/components/Loader'
 
 export default {
+  components: {
+    Loader
+  },
+
   props: {
     src: {
       type: String,
@@ -21,10 +25,6 @@ export default {
     return {
       loading: true
     }
-  },
-
-  components: {
-    Loader
   }
 }
 </script>

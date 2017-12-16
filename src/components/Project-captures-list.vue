@@ -10,17 +10,19 @@ import AbsorbesScroll from '@/mixins/Absorbes-scroll'
 import ProjectCapture from '@/components/Project-capture'
 
 export default {
+  components: {
+    ProjectCapture
+  },
+
+  mixins: [
+    AbsorbesScroll
+  ],
+
   props: {
     project: {
       type: Project,
       required: true
     }
-  },
-
-  mixins: [AbsorbesScroll],
-
-  components: {
-    ProjectCapture
   }
 }
 </script>

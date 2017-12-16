@@ -10,29 +10,20 @@
 </template>
 
 <script>
-// Components
 import ProjectTechnicalCard from '@/components/Project-technical-card'
 import ProjectCapturesList from '@/components/Project-captures-list'
-// Data
 import projects from '@/data/projects'
 
 export default {
+  components: {
+    ProjectTechnicalCard,
+    ProjectCapturesList
+  },
+
   data () {
     return {
       project: undefined
     }
-  },
-
-  methods: {
-    setProjectBasedOnRouteParams () {
-      const projectId = this.$route.params.id
-      const project = projects.find(x => x.id === projectId)
-      this.project = project
-    }
-  },
-
-  beforeMount () {
-    this.setProjectBasedOnRouteParams()
   },
 
   watch: {
@@ -41,9 +32,16 @@ export default {
     }
   },
 
-  components: {
-    ProjectTechnicalCard,
-    ProjectCapturesList
+  beforeMount () {
+    this.setProjectBasedOnRouteParams()
+  },
+
+  methods: {
+    setProjectBasedOnRouteParams () {
+      const projectId = this.$route.params.id
+      const project = projects.find(x => x.id === projectId)
+      this.project = project
+    }
   }
 }
 </script>

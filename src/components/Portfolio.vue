@@ -9,24 +9,23 @@
 </template>
 
 <script>
-// Mixins
 import RedirectsScroll from '@/mixins/Redirects-scroll'
-// Components
 import ProjectPreview from '@/components/Project-preview'
-// Data
 import projects from '@/data/projects'
 
 export default {
-  mixins: [RedirectsScroll],
+  components: {
+    ProjectPreview
+  },
+
+  mixins: [
+    RedirectsScroll
+  ],
 
   data () {
     return {
       projects
     }
-  },
-
-  components: {
-    ProjectPreview
   }
 }
 </script>
