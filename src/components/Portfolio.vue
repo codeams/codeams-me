@@ -3,7 +3,7 @@
     .column
       project-preview(
         v-for='project in projects'
-        :instance='project.preview'
+        :project='project'
         :key='project.id'
         @click.native='redirectToProject(project.id)'
       )

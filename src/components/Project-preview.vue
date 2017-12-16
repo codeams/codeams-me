@@ -1,18 +1,18 @@
 <template lang='pug'>
   .project-preview
     .capture-container
-      project-capture(clickable :url='instance.cover')
+      project-capture(clickable :url='project.cover')
     .label
-      span.name {{ instance.name }}
+      span.name {{ project.name }}
       span.dash &nbsp;—&nbsp;
-      span.role {{ instance.role }}
+      span.role {{ project.role }}
 </template>
 
 <script>
 import ProjectCapture from '@/components/Project-capture'
 
 export default {
-  props: ['instance'],
+  props: ['project'],
 
   components: {
     ProjectCapture

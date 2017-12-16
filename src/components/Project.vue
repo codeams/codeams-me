@@ -1,9 +1,9 @@
 <template lang='pug'>
-  .project.row.align-justify(v-if='instance')
+  .project.row.align-justify(v-if='project')
     .technical-card-container
-      project-technical-card(:project='instance')
+      project-technical-card(:project='project')
     .captures-list-container.column
-      project-captures-list(:project='instance')
+      project-captures-list(:project='project')
 
   .project.not-found.row.align-middle(v-else).
     Project not found :(
@@ -19,25 +19,25 @@ import projects from '@/data/projects'
 export default {
   data () {
     return {
-      instance: undefined
+      project: undefined
     }
   },
 
   methods: {
-    selectInstanceFromRouteParams () {
+    selectProjectFromRouteParams () {
       const projectId = this.$route.params.id
-      const instance = projects.find(x => x.id === projectId)
-      this.instance = instance
+      const project = projects.find(x => x.id === projectId)
+      this.project = project
     }
   },
 
   beforeMount () {
-    this.selectInstanceFromRouteParams()
+    this.selectProjectFromRouteParams()
   },
 
   watch: {
     '$route.params.id' () {
-      this.selectInstanceFromRouteParams()
+      this.selectProjectFromRouteParams()
     }
   },
 
