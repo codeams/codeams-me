@@ -1,16 +1,16 @@
 <template lang='pug'>
   .project-capture(:class='{ loading }')
     .image(:class='{ clickable }')
-      loader
+      project-capture-loader
       img(:src='src' @load='loading = false')
 </template>
 
 <script>
-import Loader from '@/components/Loader'
+import ProjectCaptureLoader from '@/components/Project-capture-loader'
 
 export default {
   components: {
-    Loader
+    ProjectCaptureLoader
   },
 
   props: {
