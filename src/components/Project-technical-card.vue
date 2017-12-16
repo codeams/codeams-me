@@ -2,7 +2,7 @@
   //- TODO: Consider refactoring the template
 
   .technical-card.row(class='collapse align-middle')
-    div
+    .column
       .header
         .type {{ project.type }}
         .name {{ project.name }}
