@@ -2,7 +2,7 @@
   .project-capture(:class='{ loading }')
     .image(:class='{ clickable }')
       loader
-      img(:src='url' @load='loading = false')
+      img(:src='src' @load='loading = false')
 </template>
 
 <script>
@@ -10,7 +10,7 @@ import Loader from '@/components/Loader'
 
 export default {
   props: {
-    url: {
+    src: {
       type: String,
       required: true
     },

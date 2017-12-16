@@ -5,7 +5,6 @@
         v-for='project in projects'
         :project='project'
         :key='project.id'
-        @click.native='redirectToProject(project.id)'
       )
 </template>
 
@@ -23,12 +22,6 @@ export default {
   data () {
     return {
       projects
-    }
-  },
-
-  methods: {
-    redirectToProject (projectId) {
-      this.$router.push({ name: 'Project', params: { id: projectId } })
     }
   },
 

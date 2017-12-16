@@ -1,17 +1,22 @@
 <template lang='pug'>
   .project-captures-list
     .capture-container(v-for='capture in project.captures' :key='capture.id')
-      project-capture(:url='capture')
+      project-capture(:src='capture')
 </template>
 
 <script>
-// Mixins
+import Project from '@/models/Project'
 import AbsorbesScroll from '@/mixins/Absorbes-scroll'
-// Components
 import ProjectCapture from '@/components/Project-capture'
 
 export default {
-  props: ['project'],
+  props: {
+    project: {
+      type: Project,
+      required: true
+    }
+  },
+
   mixins: [AbsorbesScroll],
 
   components: {

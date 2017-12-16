@@ -1,18 +1,24 @@
 <template lang='pug'>
-  .project-preview
-    .capture-container
-      project-capture(clickable :url='project.cover')
-    .label
-      span.name {{ project.name }}
-      span.dash &nbsp;—&nbsp;
-      span.role {{ project.role }}
+    router-link.project-preview(:to="`/project/${project.id}`" tag='div')
+      .capture-container
+        project-capture(:src='project.cover' clickable)
+      .label
+        span.name {{ project.name }}
+        span.dash &nbsp;—&nbsp;
+        span.role {{ project.role }}
 </template>
 
 <script>
+import Project from '@/models/Project'
 import ProjectCapture from '@/components/Project-capture'
 
 export default {
-  props: ['project'],
+  props: {
+    project: {
+      type: Project,
+      required: true
+    }
+  },
 
   components: {
     ProjectCapture

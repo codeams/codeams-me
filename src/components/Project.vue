@@ -24,7 +24,7 @@ export default {
   },
 
   methods: {
-    selectProjectFromRouteParams () {
+    setProjectBasedOnRouteParams () {
       const projectId = this.$route.params.id
       const project = projects.find(x => x.id === projectId)
       this.project = project
@@ -32,12 +32,12 @@ export default {
   },
 
   beforeMount () {
-    this.selectProjectFromRouteParams()
+    this.setProjectBasedOnRouteParams()
   },
 
   watch: {
     '$route.params.id' () {
-      this.selectProjectFromRouteParams()
+      this.setProjectBasedOnRouteParams()
     }
   },
 

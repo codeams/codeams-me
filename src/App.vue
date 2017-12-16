@@ -1,5 +1,5 @@
-<template>
-  <viewport/>
+<template lang='pug'>
+  viewport
 </template>
 
 <script>

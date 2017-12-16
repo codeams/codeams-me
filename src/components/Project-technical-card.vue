@@ -26,8 +26,15 @@
 </template>
 
 <script>
+import Project from '@/models/Project'
+
 export default {
-  props: ['project']
+  props: {
+    project: {
+      type: Project,
+      required: true
+    }
+  }
 }
 </script>
 
