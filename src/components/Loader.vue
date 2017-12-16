@@ -1,4 +1,4 @@
-<template lang='pug'>
+<template functional lang='pug'>
   .loader
     .dot(:style='{ animationDuration }')
     .dot(:style='{ animationDuration }')
