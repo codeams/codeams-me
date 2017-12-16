@@ -1,5 +1,5 @@
 <template lang='pug'>
-  .portfolio.row.collapse.align-middle(@mousewheel='redirectVerticalScroll')
+  .portfolio.row(class='collapse align-middle' @mousewheel='redirectVerticalScroll')
     .column
       project-preview(
         v-for='project in projects'

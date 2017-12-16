@@ -1,8 +1,10 @@
 <template lang='pug'>
   .heading
-    .name(@click='$router.push({ name: "Portfolio" })') Erick A. Montañez
+    .name(@click='$router.push({ name: "Portfolio" })').
+      Erick A. Montañez
     transition(name='fade')
-      span.ocupation(v-if='$route.name === "Portfolio"') Software engineer, web and iOS developer
+      span.ocupation(v-if='$route.name === "Portfolio"').
+        Software engineer, web and iOS developer
 </template>
 
 <style lang='scss'>

@@ -1,7 +1,7 @@
 <template lang='pug'>
   //- TODO: Consider refactoring the template
 
-  .technical-card.row.collapse.align-middle
+  .technical-card.row(class='collapse align-middle')
     div
       .header
         .type {{ project.type }}

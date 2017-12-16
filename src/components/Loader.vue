@@ -1,19 +1,21 @@
 <template lang='pug'>
   .loader
-    .dot(:style='{ animationDuration: duration }')
-    .dot(:style='{ animationDuration: duration }')
+    .dot(:style='{ animationDuration }')
+    .dot(:style='{ animationDuration }')
 </template>
 
 <script>
-import randomNumberInRange from '@/functions/random-number-in-range'
+import randomIntegerInRange from '@/functions/random-integer-in-range'
 
 export default {
   computed: {
-    duration () {
+    animationDuration () {
       const minDuration = 3000
       const maxDuration = 5000
-      const duration = randomNumberInRange(minDuration, maxDuration)
-      return duration + 'ms'
+      const unitAbreviation = 'ms'
+
+      const animationDuration = randomIntegerInRange(minDuration, maxDuration)
+      return animationDuration + unitAbreviation
     }
   }
 }
