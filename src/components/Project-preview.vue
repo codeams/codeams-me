@@ -1,15 +1,11 @@
-<template>
-  <div class='project-preview'>
-    <div class='capture-container'>
-      <project-capture :url='instance.cover' clickable />
-    </div>
-
-    <div class='label'>
-      <span class='name'>{{ instance.name }}</span>
-      <span class='dash'> — </span>
-      <span class='role'>{{ instance.role }}</span>
-    </div>
-  </div>
+<template lang='pug'>
+  .project-preview
+    .capture-container
+      project-capture(clickable :url='instance.cover')
+    .label
+      span.name {{ instance.name }}
+      span.dash &nbsp;—&nbsp;
+      span.role {{ instance.role }}
 </template>
 
 <script>

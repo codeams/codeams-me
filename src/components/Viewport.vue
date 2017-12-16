@@ -1,11 +1,9 @@
-<template>
-  <div class='viewport'>
-    <heading/>
-    <transition name='fade'>
-      <router-view/>
-    </transition>
-    <footing/>
-  </div>
+<template lang='pug'>
+  .viewport
+    heading
+    transition(name='fade')
+      router-view
+    footing
 </template>
 
 <script>

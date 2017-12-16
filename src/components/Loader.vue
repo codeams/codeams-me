@@ -1,8 +1,7 @@
-<template>
-  <div class='loader'>
-    <div class='dot' :style='{ animationDuration: duration }'></div>
-    <div class='dot' :style='{ animationDuration: duration }'></div>
-  </div>
+<template lang='pug'>
+  .loader
+    .dot(:style='{ animationDuration: duration }')
+    .dot(:style='{ animationDuration: duration }')
 </template>
 
 <script>

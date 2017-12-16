@@ -1,11 +1,9 @@
-<template>
-  <transition name='fade'>
-    <div class='footing' v-if='$route.name === "Portfolio"'>
-      <a href='#'>copyrights</a>
-      <a href='#'>about me</a>
-      <a href='#'>source code</a>
-    </div>
-  </transition>
+<template lang='pug'>
+  transition(name='fade')
+    .footing(v-if='$route.name === "Portfolio"')
+      a(href='#') copyrights
+      a(href='#') about me
+      a(href='#') source code
 </template>
 
 <style lang='scss'>

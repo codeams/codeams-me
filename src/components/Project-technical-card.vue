@@ -1,36 +1,28 @@
-<template>
-  <div class='technical-card row collapse align-middle'>
-    <div>
-      <div class='header'>
-        <div class='type'>{{ project.type }}</div>
-        <div class='name'>{{ project.name }}</div>
-        <div class='role'>{{ project.role }}</div>
-      </div>
+<template lang='pug'>
+  //- TODO: Consider refactoring the template
 
-      <div class='story'>{{ project.story }}</div>
+  .technical-card.row.collapse.align-middle
+    div
+      .header
+        .type {{ project.type }}
+        .name {{ project.name }}
+        .role {{ project.role }}
 
-      <div class='footer'>
-        <div class='separator'></div>
-        <div class='collabs'>
-          Co-worked with
-          <span v-for='collab in project.collabs' :key='collab'>
-            @{{ collab }}
-          </span>
-        </div>
+      .story {{ project.story }}
 
-        <div class='dates-interval'>
-          <div v-if='project.startDate === project.endDate'>
-            around <strong>{{ project.startDate }}</strong>
-          </div>
-          <div v-else>
-            from <strong>{{ project.startDate }}</strong>
-            <span> to </span>
-            <strong>{{ project.endDate }}</strong>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+      .footer
+        .separator
+
+        .collabs
+          | Co-worked with
+          span(v-for='collab, index in project.collabs' :key='collab')
+            span(v-if='index > 0') ,
+            | &nbsp;@{{ collab }}
+
+        .dates-interval(v-if='project.startDate === project.endDate').
+          around #[strong {{ project.startDate }}]
+        .dates-interval(v-else).
+          from #[strong {{ project.startDate }}] to #[strong {{ project.endDate }}]
 </template>
 
 <script>

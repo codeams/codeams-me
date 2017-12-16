@@ -1,10 +1,7 @@
-<template>
-  <div class='project-captures-list'>
-    <div class='capture-container'
-      v-for='capture in project.captures' :key='capture.id'>
-        <project-capture :url='capture' />
-    </div>
-  </div>
+<template lang='pug'>
+  .project-captures-list
+    .capture-container(v-for='capture in project.captures' :key='capture.id')
+      project-capture(:url='capture')
 </template>
 
 <script>

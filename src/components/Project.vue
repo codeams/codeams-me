@@ -1,15 +1,12 @@
-<template>
-  <div v-if='instance' class='project row align-justify'>
-    <div class='technical-card-container'>
-      <project-technical-card :project='instance' />
-    </div>
-    <div class='captures-list-container column'>
-      <project-captures-list :project='instance' />
-    </div>
-  </div>
-  <div v-else class='project not-found row align-middle'>
+<template lang='pug'>
+  .project.row.align-justify(v-if='instance')
+    .technical-card-container
+      project-technical-card(:project='instance')
+    .captures-list-container.column
+      project-captures-list(:project='instance')
+
+  .project.not-found.row.align-middle(v-else).
     Project not found :(
-  </div>
 </template>
 
 <script>

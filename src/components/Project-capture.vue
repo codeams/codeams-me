@@ -1,10 +1,8 @@
-<template>
-  <div class='project-capture' :class='{ "loading": loading }'>
-    <div class='image' :class='{ "clickable": clickable }'>
-      <loader />
-      <img :src='url' @load='loading = false' />
-    </div>
-  </div>
+<template lang='pug'>
+  .project-capture(:class='{ loading }')
+    .image(:class='{ clickable }')
+      loader
+      img(:src='url' @load='loading = false')
 </template>
 
 <script>

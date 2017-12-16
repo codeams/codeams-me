@@ -1,12 +1,12 @@
-<template>
-  <div @mousewheel='redirectVerticalScroll'
-    class='portfolio row collapse align-middle'>
-    <div class='column'>
-      <project-preview v-for='project in projects'
-        :instance='project.preview' :key='project.id'
-        @click.native='redirectToProject(project.id)' />
-    </div>
-  </div>
+<template lang='pug'>
+  .portfolio.row.collapse.align-middle(@mousewheel='redirectVerticalScroll')
+    .column
+      project-preview(
+        v-for='project in projects'
+        :instance='project.preview'
+        :key='project.id'
+        @click.native='redirectToProject(project.id)'
+      )
 </template>
 
 <script>
