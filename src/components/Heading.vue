@@ -1,7 +1,6 @@
 <template lang='pug'>
   .heading
-    //- TODO: Refactor to use router-link
-    .name(@click='$router.push({ name: "Portfolio" })').
+    router-link.name(to='/' tag='div').
       Erick A. Montañez
     transition(name='fade')
       span.ocupation(v-if='$route.name === "Portfolio"').

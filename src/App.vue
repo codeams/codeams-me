@@ -19,10 +19,6 @@ export default {
 </script>
 
 <style lang='scss'>
-// TODO: Check for performance and weight
-//// of styles because of sass loader includes
-//// in webpack utils configuration.
-
 // Include app.scss into the bundle
 @import 'app';
 
