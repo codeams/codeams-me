@@ -27,8 +27,10 @@ export default {
 // Use the app file:
 @import 'app';
 
-// General use styles
+// Include normalization styles
 @import '~assets/style/normalize';
+
+// Include transitions for the router view
 @import '~assets/style/transitions';
 
 .app {
