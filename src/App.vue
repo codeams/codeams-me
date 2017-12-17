@@ -23,27 +23,16 @@ export default {
 //// of styles because of sass loader includes
 //// in webpack utils configuration.
 
-// Do NOT import/include vendor styles here.
-// Use the app file:
+// Include app.scss into the bundle
 @import 'app';
 
-// Include normalization styles
-@import '~assets/style/normalize';
-
-// Include transitions for the router view
 @import '~assets/style/transitions';
 
 .app {
+  @extend .gradient-background;
   @include xy-grid-container(100%);
-  height: 100vh;
 
-  // TODO: Refactor. Extract and extend.
-  //// Share with body.
-  background-image: radial-gradient(
-    farthest-corner at center right,
-    from-palette(cello) 15%,
-    from-palette(big-stone) 80%
-  );
+  height: 100vh;
   color: from-palette(white);
 }
 </style>

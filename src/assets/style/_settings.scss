@@ -1,20 +1,6 @@
 
 ////
-/// 1. Foundation custom configuration
-////
-
-// 1.0 Import foundation default settings
-@import 'foundation-settings';
-
-// 1.1 Font
-$body-font-family: 'Fira Sans', Arial, sans-serif;
-
-// 1.2 XY Grid
-$grid-margin-gutters: (small: 25px);
-$grid-container-padding: 0px;
-
-////
-/// 2. Color palette
+/// 1. Color palette
 ////
 
 $palette: (
@@ -26,3 +12,28 @@ $palette: (
 );
 
 @import 'functions';
+
+////
+/// 2. Foundation custom configuration
+////
+
+// 2.0 Import foundation default settings
+@import 'foundation-settings';
+
+// 2.1 Font
+$body-font-family: 'Fira Sans', Arial, sans-serif;
+$body-font-color: from-palette(white);
+$global-lineheight: 1.3;
+
+// 2.2 XY Grid
+$grid-margin-gutters: (small: 25px);
+$grid-container-padding: 0px;
+
+// 2.3 Global styles
+$body-background: from-palette(big-stone);
+
+////
+/// 3. Import unsemantic styles
+////
+
+@import 'unsemantic';

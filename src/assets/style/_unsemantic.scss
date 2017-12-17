@@ -18,3 +18,11 @@
   @extend .overlay;
   position: absolute;
 }
+
+.gradient-background {
+  background-image: radial-gradient(
+    farthest-corner at center right,
+    from-palette(cello) 15%,
+    from-palette(big-stone) 80%
+  );
+}

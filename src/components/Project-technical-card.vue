@@ -1,8 +1,8 @@
 <template lang='pug'>
   //- TODO: Consider refactoring the template
 
-  .technical-card.row(class='collapse align-middle')
-    .column
+  .technical-card
+    .cell
       .header
         .type {{ project.type }}
         .name {{ project.name }}
@@ -40,6 +40,9 @@ export default {
 
 <style lang='scss'>
 .technical-card {
+  @include xy-grid(vertical);
+  @include flex-align($x: center, $y: middle);
+
   width: 100%;
   height: 100%;
   line-height: 1.3;
