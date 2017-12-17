@@ -1,6 +1,6 @@
 <template lang='pug'>
   .heading
-    .name(@click='$router.push({ name: "Portfolio" })').
+    router-link.name(to='/' tag='div').
       Erick A. Montañez
     transition(name='fade')
       span.ocupation(v-if='$route.name === "Portfolio"').
@@ -15,22 +15,18 @@
   left: 0;
   padding: 40px 0 40px 70px;
 
-  & * {
-    cursor: default;
-  }
-
   .name {
     font-size: 20px;
     font-weight: bold;
-    color: get-color(white);
-    cursor: pointer;
     letter-spacing: -0.16px;
+    cursor: pointer;
   }
 
   .ocupation {
     font-size: 18px;
     font-style: italic;
     letter-spacing: -0.12px;
+    cursor: default;
   }
 }
 </style>

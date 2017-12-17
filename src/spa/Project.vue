@@ -1,38 +1,29 @@
 <template lang='pug'>
-  .project.row.align-justify(v-if='project')
+  .project(v-if='project')
     .technical-card-container
       project-technical-card(:project='project')
-    .captures-list-container.column
+    .captures-list-container
       project-captures-list(:project='project')
 
-  .project.not-found.row.align-middle(v-else).
+  .project.not-found(v-else).
     Project not found :(
 </template>
 
 <script>
-// Components
 import ProjectTechnicalCard from '@/components/Project-technical-card'
 import ProjectCapturesList from '@/components/Project-captures-list'
-// Data
 import projects from '@/data/projects'
 
 export default {
+  components: {
+    ProjectTechnicalCard,
+    ProjectCapturesList
+  },
+
   data () {
     return {
       project: undefined
     }
-  },
-
-  methods: {
-    setProjectBasedOnRouteParams () {
-      const projectId = this.$route.params.id
-      const project = projects.find(x => x.id === projectId)
-      this.project = project
-    }
-  },
-
-  beforeMount () {
-    this.setProjectBasedOnRouteParams()
   },
 
   watch: {
@@ -41,36 +32,42 @@ export default {
     }
   },
 
-  components: {
-    ProjectTechnicalCard,
-    ProjectCapturesList
+  beforeMount () {
+    this.setProjectBasedOnRouteParams()
+  },
+
+  methods: {
+    setProjectBasedOnRouteParams () {
+      const projectId = this.$route.params.id
+      const project = projects.find(x => x.id === projectId)
+      this.project = project
+    }
   }
 }
 </script>
 
 <style lang='scss'>
 .project {
-  position: absolute;
-  top: 0;
-  left: 0;
+  @include xy-grid;
+  @include xy-grid-frame;
+  @include flex-align($x: justify, $y:middle);
 
-  width: 100%;
-  height: 100%;
-  max-width: 100%;
-  max-height: 100%;
+  height: 100vh;
 
   .technical-card-container {
+    @include xy-cell($size: shrink);
+
     overflow: hidden;
     width: 400px;
-    height: 100%;
-    padding-left: 67px;
-    box-sizing: content-box;
+    height: 100vh;
+    margin-left: 67px;
   }
 
   .captures-list-container {
-    width: 100%;
-    height: 100%;
-    max-width: 870px;
+    @extend .no-scrollbars;
+
+    @include xy-cell($size: auto);
+    @include xy-cell-block($vertical: true);
 
     padding-right: 60px;
     padding-left: 110px;
@@ -78,8 +75,7 @@ export default {
 }
 
 .project.not-found {
-  height: 100%;
-  padding-left: 67px;
+  padding-left: 70px;
   font-weight: bold;
   font-size: 30px;
   text-transform: uppercase;

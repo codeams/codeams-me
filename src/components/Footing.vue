@@ -8,24 +8,24 @@
 
 <style lang='scss'>
   .footing {
-    z-index: 99;
+    z-index: 1;
     position: absolute;
-    left: 0;
     bottom: 0;
+    left: 0;
     padding: 40px 0 40px 70px;
     font-style: italic;
-    
+
     a,
     a:visited {
       margin-right: 40px;
-      color: #434666;
-
-      &:hover {
-        text-decoration: underline;
-      }
+      color: from-palette(corn-flower-blue);
 
       &:last-of-type {
         margin-right: 0;
+      }
+
+      &:hover {
+        text-decoration: underline;
       }
     }
   }

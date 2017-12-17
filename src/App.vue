@@ -1,28 +1,34 @@
 <template lang='pug'>
-  viewport
+  .app
+    heading
+    transition(name='fade')
+      router-view
+    footing
 </template>
 
 <script>
-import Viewport from '@/components/Viewport'
+import Heading from '@/components/Heading'
+import Footing from '@/components/Footing'
 
 export default {
   components: {
-    Viewport
+    Heading,
+    Footing
   }
 }
 </script>
 
 <style lang='scss'>
+// Include app.scss into the bundle
 @import 'app';
 
-html {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+@import '~assets/style/transitions';
 
-html, body {
-  width: 100%;
-  height: 100%;
-  background: get-color(palenight);
+.app {
+  @extend .gradient-background;
+  @include xy-grid-container(100%);
+
+  height: 100vh;
+  color: from-palette(white);
 }
 </style>

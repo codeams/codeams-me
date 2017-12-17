@@ -1,7 +1,12 @@
 <template lang='pug'>
   .project-captures-list
-    .capture-container(v-for='capture in project.captures' :key='capture.id')
-      project-capture(:src='capture')
+    .captures-slider
+      .captures-grid
+        .capture-container(
+          v-for='capture in project.captures'
+          :key='capture.id'
+        )
+          project-capture(:src='capture')
 </template>
 
 <script>
@@ -10,37 +15,49 @@ import AbsorbesScroll from '@/mixins/Absorbes-scroll'
 import ProjectCapture from '@/components/Project-capture'
 
 export default {
+  components: {
+    ProjectCapture
+  },
+
+  mixins: [
+    AbsorbesScroll
+  ],
+
   props: {
     project: {
       type: Project,
       required: true
     }
-  },
-
-  mixins: [AbsorbesScroll],
-
-  components: {
-    ProjectCapture
   }
 }
 </script>
 
 <style lang='scss'>
 .project-captures-list {
-  width: 100%;
-  height: 100%;
+  @include xy-grid(vertical);
+  @include xy-grid-frame(vertical, nested);
+  @include flex-align($x: center);
+  
+  max-width: 100%;
+}
+
+.captures-slider {
+  @include xy-cell-block-container;
+
   padding-top: 140px;
   padding-bottom: 60px;
-  overflow-x: hidden;
-  overflow-y: scroll;
+}
 
-  &::-webkit-scrollbar {
-    display: none; 
-  }
+.captures-grid {
+  @include xy-grid(vertical, $wrap: false);
 }
 
 .capture-container {
-  width: 100%;
-  margin-bottom: 30px;
+  @include xy-cell(
+    $size: shrink,
+    $gutter-output: true,
+    $gutter-position: top bottom
+  );
+  @include xy-cell-block($vertical: true);
 }
 </style>
