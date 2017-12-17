@@ -1,12 +1,12 @@
 <template lang='pug'>
-  .project.grid-x.grid-frame.align-justify.align-middle(v-if='project')
-    .technical-card-container.cell.shrink
+  .project(v-if='project')
+    .technical-card-container
       project-technical-card(:project='project')
-    .captures-list-container.cell.auto.cell-block-y
+    .captures-list-container
       project-captures-list(:project='project')
 
-  .project.not-found.grid-x.grid-frame.grid-padding-x.align-middle(v-else)
-    .cell Project not found :(
+  .project.not-found(v-else).
+    Project not found :(
 </template>
 
 <script>
@@ -48,9 +48,15 @@ export default {
 
 <style lang='scss'>
 .project {
+  @include xy-grid;
+  @include xy-grid-frame;
+  @include flex-align($x: justify, $y:middle);
+
   height: 100vh;
 
   .technical-card-container {
+    @include xy-cell($size: shrink);
+
     overflow: hidden;
     width: 400px;
     height: 100vh;
@@ -60,13 +66,16 @@ export default {
   .captures-list-container {
     @extend .no-scrollbars;
 
+    @include xy-cell($size: auto);
+    @include xy-cell-block($vertical: true);
+
     padding-right: 60px;
     padding-left: 110px;
   }
 }
 
 .project.not-found {
-  padding-left: 67px;
+  padding-left: 70px;
   font-weight: bold;
   font-size: 30px;
   text-transform: uppercase;
