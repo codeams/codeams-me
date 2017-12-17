@@ -29,7 +29,6 @@ export default {
 
 // General use styles
 @import '~assets/style/normalize';
-@import '~assets/style/unsemantic';
 @import '~assets/style/transitions';
 
 .app {
