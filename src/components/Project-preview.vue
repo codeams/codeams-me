@@ -1,7 +1,7 @@
 <template lang='pug'>
     router-link.project-preview(:to="`/project/${project.id}`" tag='div')
       .capture-container
-        project-capture(:src='project.cover' clickable)
+        project-capture(:src='project.cover' actionable)
       .label
         strong.name {{ project.name }}
         span.dash &nbsp;—&nbsp;
@@ -38,6 +38,7 @@ export default {
 
   // Override cell width
   width: 508px;
+  cursor: pointer;
 
   .capture-container {
     width: 100%;
