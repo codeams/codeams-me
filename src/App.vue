@@ -37,7 +37,11 @@ export default {
   @include xy-grid-container(100%);
   height: 100vh;
 
-  background-image: radial-gradient(farthest-corner at center right, #3C465F 15%, #19213D 80%);
+  background-image: radial-gradient(
+    farthest-corner at center right,
+    #3C465F 15%,
+    #19213D 80%
+  );
   color: get-color(white);
 }
 </style>
