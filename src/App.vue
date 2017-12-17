@@ -37,11 +37,13 @@ export default {
   @include xy-grid-container(100%);
   height: 100vh;
 
+  // TODO: Refactor. Extract and extend.
+  //// Share with body.
   background-image: radial-gradient(
     farthest-corner at center right,
-    #3C465F 15%,
-    #19213D 80%
+    from-palette(cello) 15%,
+    from-palette(big-stone) 80%
   );
-  color: get-color(white);
+  color: from-palette(white);
 }
 </style>

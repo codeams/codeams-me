@@ -18,7 +18,7 @@
     a,
     a:visited {
       margin-right: 40px;
-      color: #434666;
+      color: from-palette(corn-flower-blue);
 
       &:last-of-type {
         margin-right: 0;

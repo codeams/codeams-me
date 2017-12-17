@@ -42,16 +42,13 @@ export default {
 .technical-card {
   width: 100%;
   height: 100%;
-
-  * {
-    line-height: 1.3;
-  }
+  line-height: 1.3;
 
   .type {
     font-size: 24px;
     text-transform: uppercase;
     letter-spacing: 1px;
-    color: #606280;
+    color: from-palette(dolphin);
     margin-bottom: 10px;
   }
 
@@ -79,12 +76,12 @@ export default {
     width: 42px;
     height: 1px;
     margin-bottom: 13px;
-    background:  #606280;
+    background-color: from-palette(dolphin);
   }
   
   .footer {
     font-style: italic;
-    color: #606280;
+    color: from-palette(dolphin);
   }
 
   .collabs {

@@ -20,7 +20,6 @@
     font-size: 20px;
     font-weight: bold;
     letter-spacing: -0.16px;
-    color: get-color(white);
     cursor: pointer;
   }
 

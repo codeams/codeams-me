@@ -58,7 +58,8 @@ export default {
   }
 
   .captures-list-container {
-    height: 100vh;
+    @extend .no-scrollbars;
+
     padding-right: 60px;
     padding-left: 110px;
   }
