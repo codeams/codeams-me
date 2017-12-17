@@ -1,5 +1,6 @@
 <template lang='pug'>
   .heading
+    //- TODO: Refactor to use router-link
     .name(@click='$router.push({ name: "Portfolio" })').
       Erick A. Montañez
     transition(name='fade')
@@ -15,22 +16,19 @@
   left: 0;
   padding: 40px 0 40px 70px;
 
-  & * {
-    cursor: default;
-  }
-
   .name {
     font-size: 20px;
     font-weight: bold;
+    letter-spacing: -0.16px;
     color: get-color(white);
     cursor: pointer;
-    letter-spacing: -0.16px;
   }
 
   .ocupation {
     font-size: 18px;
     font-style: italic;
     letter-spacing: -0.12px;
+    cursor: default;
   }
 }
 </style>

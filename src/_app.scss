@@ -1,11 +1,20 @@
 
-// Load Foundation variables and mixins
-@import './assets/style/settings';
 @import '~foundation-sites/scss/foundation';
 
-@include foundation-global-styles;
+@include foundation-xy-grid-classes(
+  $base-grid: true,
+  $margin-grid: true,
+  $padding-grid: true,
+  $block-grid: true,
+  $collapse: true,
+  $offset: true,
+  $vertical-grid: true
+);
+
 @include foundation-flex-classes;
 @include foundation-flex-grid;
+
+@include foundation-global-styles;
 @include foundation-typography;
 @include foundation-button;
 @include foundation-forms;

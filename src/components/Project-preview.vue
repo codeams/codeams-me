@@ -1,5 +1,5 @@
 <template lang='pug'>
-    router-link.project-preview(:to="`/project/${project.id}`" tag='div')
+    router-link.project-preview.cell.cell-block(:to="`/project/${project.id}`" tag='div')
       .capture-container
         project-capture(:src='project.cover' clickable)
       .label

@@ -1,11 +1,12 @@
 <template lang='pug'>
-  .portfolio.row(class='collapse align-middle' @mousewheel='redirectVerticalScroll')
-    .column
-      project-preview(
-        v-for='project in projects'
-        :project='project'
-        :key='project.id'
-      )
+  .portfolio.grid-x.grid-frame(@mousewheel='redirectVerticalScroll')
+    .cell.shrink.cell-block-container
+      .grid-x
+        project-preview(
+          v-for='project in projects'
+          :project='project'
+          :key='project.id'
+        )
 </template>
 
 <script>
@@ -32,21 +33,9 @@ export default {
 
 <style lang='scss'>
 .portfolio {
-  position: absolute;
-  top: 0;
-  left: 0;
-
-  width: 100%;
-  height: 100%;
-  max-width: 100%;
-  max-height: 100%;
-
-  overflow-x: scroll;
-  overflow-y: hidden;
-  white-space: nowrap;
-
-  &::-webkit-scrollbar { 
-    display: none; 
-  }
+  @extend .no-scrollbars;
+  // @include xy-grid(horizontal, false);
+  @include flex-align($x: left, $y: middle);
+  height: 100vh;
 }
 </style>
