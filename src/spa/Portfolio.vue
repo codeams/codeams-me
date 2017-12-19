@@ -1,5 +1,5 @@
 <template lang='pug'>
-  .portfolio(@mousewheel='redirectVerticalScroll')
+  .portfolio
     .previews-slider
       .previews-grid
         project-preview(
@@ -27,6 +27,10 @@ export default {
     return {
       projects
     }
+  },
+
+  mounted () {
+    this.redirectUnidirectionalScrollTo('.previews-slider')
   }
 }
 </script>

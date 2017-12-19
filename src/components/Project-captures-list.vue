@@ -11,17 +11,12 @@
 
 <script>
 import Project from '@/models/Project'
-import AbsorbesScroll from '@/mixins/Absorbes-scroll'
 import ProjectCapture from '@/components/Project-capture'
 
 export default {
   components: {
     ProjectCapture
   },
-
-  mixins: [
-    AbsorbesScroll
-  ],
 
   props: {
     project: {

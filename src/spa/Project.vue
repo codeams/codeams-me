@@ -12,6 +12,7 @@
 <script>
 import ProjectTechnicalCard from '@/components/Project-technical-card'
 import ProjectCapturesList from '@/components/Project-captures-list'
+import RedirectsScroll from '@/mixins/Redirects-scroll'
 import projects from '@/data/projects'
 
 export default {
@@ -19,6 +20,10 @@ export default {
     ProjectTechnicalCard,
     ProjectCapturesList
   },
+
+  mixins: [
+    RedirectsScroll
+  ],
 
   data () {
     return {
@@ -34,6 +39,10 @@ export default {
 
   beforeMount () {
     this.setProjectBasedOnRouteParams()
+  },
+
+  mounted () {
+    this.redirectScrollTo('.captures-list-container')
   },
 
   methods: {
