@@ -52,19 +52,19 @@ export default {
   @include xy-grid-frame;
   @include flex-align($x: justify, $y:middle);
 
-  height: 100vh;
+  height: 100%;
 
   .technical-card-container {
     @include xy-cell($size: shrink);
 
     overflow: hidden;
     width: 400px;
-    height: 100vh;
+    height: 100%;
     margin-left: 67px;
   }
 
   .captures-list-container {
-    @extend .no-scrollbars;
+    @extend .hides-scrollbars;
 
     @include xy-cell($size: auto);
     @include xy-cell-block($vertical: true);
