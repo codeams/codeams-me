@@ -1,6 +1,6 @@
 <template lang='pug'>
   .portfolio(@mousewheel='redirectVerticalScroll')
-    .previews-slider
+    .previews-container
       .previews-grid
         project-preview(
           v-for='project in projects'
@@ -33,24 +33,29 @@ export default {
 
 <style lang='scss'>
 .portfolio {
-  @extend .no-scrollbars;
-
   @include xy-grid;
-  @include xy-grid-frame;
-  @include flex-align($x: left, $y: middle);
+  @include xy-grid-frame($nested: true);
+  @include flex-align($x: center, $y: middle);
 
   height: 100vh;
 }
 
-.previews-slider {
-  @include xy-cell-block-container;
+.previews-container {
+  @extend .no-scrollbars;
 
-  padding-left: 70px;
-  padding-right: 70px;
+  @include xy-cell($size: auto);
+  @include xy-cell-block;
+  @include xy-gutters($negative: true);
+  @include xy-grid;
+
+  width: 100vw;
 }
 
 .previews-grid {
-  @include xy-grid(horizontal, false);
+  @include xy-grid($wrap: false);
   @include xy-gutters($negative: true);
+
+  padding-left: 70px;
+  padding-right: 70px;
 }
 </style>

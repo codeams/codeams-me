@@ -34,7 +34,6 @@ export default {
     $size: shrink,
     $gutter-output: true
   );
-  @include xy-cell-block;
 
   // Override cell width
   width: 508px;
