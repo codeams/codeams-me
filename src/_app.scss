@@ -1,13 +1,14 @@
 
-// Load Foundation variables and mixins
-@import './assets/style/settings';
+// Load global styles to be bundled
+@import '~assets/style/global';
+
+// Load custom configuration of Foundation Sites
 @import '~foundation-sites/scss/foundation';
 
+// Include foundation global styles
+// What does it do? Kind of normalizes the document
+// styles and adds some document font styles
 @include foundation-global-styles;
-@include foundation-flex-classes;
-@include foundation-flex-grid;
+
+// Include typography foundation styles
 @include foundation-typography;
-@include foundation-button;
-@include foundation-forms;
-@include foundation-visibility-classes;
-@include foundation-float-classes;

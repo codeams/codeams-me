@@ -7,40 +7,48 @@ let projects = [
     type: 'Personal project',
     name: 'Warriors Lighthouse',
     role: 'Vue development, UI design',
-    story: 'I did SPA development using Vue and UI design using Adobe Experience Design. The main idea of the project was to increase the quality of Warriors company processes and reduce the number of human errors.',
+    story: 'I did web development using Vue and UI design using Adobe Experience Design. The main idea of the project was to increase the quality of the company processes by reducing the number of human errors.',
     collabs: ['isisnaomi'],
     startDate: 'March 2017',
     endDate: 'October 2017',
     captures: [
-      'http://assets.app/warriors-lighthouse.png',
-      'http://assets.app/warriors-lighthouse-2.png',
-      'http://assets.app/warriors-lighthouse.png',
-      'http://assets.app/warriors-lighthouse-2.png',
-      'http://assets.app/warriors-lighthouse.png',
-      'http://assets.app/warriors-lighthouse-2.png',
-      'http://assets.app/warriors-lighthouse.png',
-      'http://assets.app/warriors-lighthouse-2.png'
+      'http://assets.app/warriors/1.png',
+      'http://assets.app/warriors/2.png',
+      'http://assets.app/warriors/3.png',
+      'http://assets.app/warriors/4.png'
     ]
   },
   {
-    id: 'semple',
-    type: 'Yellowme Project',
-    name: 'Semple',
-    role: 'iOS development, API design',
-    story: '',
-    captures: ['http://assets.app/semple.png']
-  },
-  {
     id: 'kiiwik-landing',
+    type: 'YellowMe Project',
     name: 'Kiiwik Landing',
     role: 'Front-end development',
-    captures: ['http://assets.app/kiiwik-landing.png']
+    story: 'I did front-end web development using Bootstrap. This project was an effort of the Kiiwik team to share the idea behind the project and communicate the security and personality the app has to offer.',
+    collabs: ['giocervera'],
+    startDate: 'June 2017',
+    endDate: 'June 2017',
+    captures: [
+      'http://assets.app/kiiwik/1.png',
+      'http://assets.app/kiiwik/2.png',
+      'http://assets.app/kiiwik/3.png',
+      'http://assets.app/kiiwik/4.png'
+    ]
   },
   {
-    id: 'congress',
-    name: 'Congress',
-    role: 'Vue development, UI & interaction design',
-    captures: ['http://assets.app/congress.png']
+    id: 'astro-dashboard',
+    type: 'Personal project',
+    name: 'Astro Dashboard',
+    role: 'Web development, UI design',
+    story: 'I did web development using jQuery & PHP and UI design using Adobe Photoshop. The purpose of the project was to allow Astrosalsa to recover control over payments, classes access and accounting.',
+    collabs: ['isisnaomi', 'davidhernandeze'],
+    startDate: 'August 2016',
+    endDate: 'January 2017',
+    captures: [
+      'http://assets.app/astrosalsa/1.png',
+      'http://assets.app/astrosalsa/2.png',
+      'http://assets.app/astrosalsa/3.png',
+      'http://assets.app/astrosalsa/4.png'
+    ]
   }
 ]
 

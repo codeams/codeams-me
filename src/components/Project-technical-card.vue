@@ -1,81 +1,113 @@
-<template>
-  <div class='technical-card row collapse align-middle'>
-    <div>
-      <div class='header'>
-        <div class='type'>{{ project.type }}</div>
-        <div class='name'>{{ project.name }}</div>
-        <div class='role'>{{ project.role }}</div>
-      </div>
+<template lang='pug'>
+  //- TODO: Consider refactoring the template
 
-      <div class='story'>{{ project.story }}</div>
+  .technical-card
+    .cell
+      .header
+        .type {{ project.type }}
+        .name {{ project.name }}
+        .role {{ project.role }}
 
-      <div class='footer'>
-        <div class='separator'></div>
-        <div class='collabs'>
-          Co-worked with
-          <span v-for='collab in project.collabs' :key='collab'>
-            @{{ collab }}
-          </span>
-        </div>
+      .story {{ project.story }}
 
-        <div class='dates-interval'>
-          from <strong>{{ project.startDate }}</strong> to <strong>{{ project.endDate }}</strong>
-        </div>
-      </div>
-    </div>
-  </div>
+      .footer
+        .separator
+
+        .collabs
+          | Co-worked with
+          span(v-for='collab, index in project.collabs' :key='collab')
+            span(v-if='index > 0') ,
+            | &nbsp;@{{ collab }}
+
+        .dates-interval(v-if='project.startDate === project.endDate').
+          around #[strong {{ project.startDate }}]
+        .dates-interval(v-else).
+          from #[strong {{ project.startDate }}] to #[strong {{ project.endDate }}]
 </template>
 
 <script>
+import Project from '@/models/Project'
+
 export default {
-  props: ['project']
+  props: {
+    project: {
+      type: Project,
+      required: true
+    }
+  }
 }
 </script>
 
 <style lang='scss'>
 .technical-card {
-  width: 100%;
-  height: 100%;
+  @include xy-grid(vertical);
+  @include flex-align($x: center, $y: middle);
 
-  * {
-    line-height: 1.3;
+  width: 100%;
+  line-height: 1.3;
+  text-align: center;
+
+  @include breakpoint(large) {
+    height: 100%;
+    text-align: left;
   }
 
   .type {
     font-size: 24px;
     text-transform: uppercase;
     letter-spacing: 1px;
-    color: rgba(159, 182, 193, 0.3);
+    color: from-palette(dolphin);
     margin-bottom: 10px;
   }
 
   .name {
     font-size: 36px;
     font-weight: bold;
-    letter-spacing: -1px;
+    letter-spacing: -0.24px;
     text-transform: uppercase;
   }
 
   .role {
+    margin-bottom: 20px;
     font-size: 20px;
-    margin-bottom: 160px;
+    font-style: italic;
+
+    @include breakpoint(large) {
+      margin-bottom: 160px;
+    }
   }
 
   .story {
-    font-size: 18px;
-    line-height: 1.5;
     margin-bottom: 50px;
+    font-size: 18px;
+    font-family: 'Source Sans Pro', $body-font-family;
+    line-height: 1.5;
+    display: none;
+
+    @include breakpoint(large) {
+      display: block;
+    }
+
+    // TODO: Refactor using show-for mixin
   }
 
   .separator {
     width: 42px;
     height: 1px;
     margin-bottom: 13px;
-    background:  hsl(0, 0%, 100%);
+    margin-left: auto;
+    margin-right: auto;
+    background-color: from-palette(dolphin);
+
+    @include breakpoint(large) {
+      margin-left: 0;
+      margin-right: 0;
+    }
   }
   
   .footer {
-    color: #9fb6c1;
+    font-style: italic;
+    color: from-palette(dolphin);
   }
 
   .collabs {

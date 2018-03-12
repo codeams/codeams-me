@@ -1,25 +1,27 @@
-<template>
-  <div class='project-preview'>
-    <div class='capture-container'>
-      <project-capture :url='instance.cover' />
-    </div>
-
-    <div class='label'>
-      <span class='name'>{{ instance.name }}</span>
-      <span class='dash'> — </span>
-      <span class='role'>{{ instance.role }}.</span>
-    </div>
-  </div>
+<template lang='pug'>
+    router-link.project-preview(:to="`/project/${project.id}`" tag='div')
+      .capture-container
+        project-capture(:src='project.cover' actionable)
+      .label
+        strong.name {{ project.name }}
+        span.dash &nbsp;—&nbsp;
+        span.role {{ project.role }}
 </template>
 
 <script>
+import Project from '@/models/Project'
 import ProjectCapture from '@/components/Project-capture'
 
 export default {
-  props: ['instance'],
-
   components: {
     ProjectCapture
+  },
+
+  props: {
+    project: {
+      type: Project,
+      required: true
+    }
   }
 }
 </script>
@@ -28,35 +30,33 @@ export default {
 // TODO: Refactor to use dinamic height
 
 .project-preview {
-  display: inline-block;
-  width: 508px;
-  margin-left: 15px;
+  @include xy-cell(
+    $size: shrink,
+    $gutter-output: true
+  );
+
+  // Override cell width
+  width: calc(100vw - 30px);
+  padding-bottom: 30px;
   cursor: pointer;
 
-  &:first-of-type {
-    margin-left: 70px;
-  }
-
-  &:last-of-type {
-    margin-right: 70px;
+  @include breakpoint(large) {
+    width: 508px;
+    padding-bottom: 0;
   }
 
   .capture-container {
     width: 100%;
-    height: 431px;
+
+    @include breakpoint(large) {
+      // TODO: Check if this is actually necessary
+      height: 431px;
+    }
   }
 
   .label {
     margin-top: 27px;
-    color: get-color(white);
-
-    .name {
-      font-weight: bold;
-    }
-
-    .role {
-      font-style: italic;
-    }
+    font-style: italic;
   }
 }
 </style>
