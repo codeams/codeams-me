@@ -12,10 +12,10 @@ let projects = [
     startDate: 'March 2017',
     endDate: 'October 2017',
     captures: [
-      'http://assets.app/warriors/1.png',
-      'http://assets.app/warriors/2.png',
-      'http://assets.app/warriors/3.png',
-      'http://assets.app/warriors/4.png'
+      '/static/warriors/1.png',
+      '/static/warriors/2.png',
+      '/static/warriors/3.png',
+      '/static/warriors/4.png'
     ]
   },
   {
@@ -28,10 +28,10 @@ let projects = [
     startDate: 'June 2017',
     endDate: 'June 2017',
     captures: [
-      'http://assets.app/kiiwik/1.png',
-      'http://assets.app/kiiwik/2.png',
-      'http://assets.app/kiiwik/3.png',
-      'http://assets.app/kiiwik/4.png'
+      '/static/kiiwik/1.png',
+      '/static/kiiwik/2.png',
+      '/static/kiiwik/3.png',
+      '/static/kiiwik/4.png'
     ]
   },
   {
@@ -44,10 +44,10 @@ let projects = [
     startDate: 'August 2016',
     endDate: 'January 2017',
     captures: [
-      'http://assets.app/astrosalsa/1.png',
-      'http://assets.app/astrosalsa/2.png',
-      'http://assets.app/astrosalsa/3.png',
-      'http://assets.app/astrosalsa/4.png'
+      '/static/astrosalsa/1.png',
+      '/static/astrosalsa/2.png',
+      '/static/astrosalsa/3.png',
+      '/static/astrosalsa/4.png'
     ]
   }
 ]
