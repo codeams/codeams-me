@@ -33,7 +33,14 @@ $grid-container-padding: 0px;
 $body-background: from-palette(big-stone);
 
 ////
-/// 3. Import unsemantic styles
+/// 3. Spacing variables
+////
+
+$base-spacing: 5px;
+$site-left-padding: 70px;
+
+////
+/// 4. Import unsemantic styles
 ////
 
 @import 'unsemantic';

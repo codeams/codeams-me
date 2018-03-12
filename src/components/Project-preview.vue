@@ -36,12 +36,22 @@ export default {
   );
 
   // Override cell width
-  width: 508px;
+  width: calc(100vw - 30px);
+  padding-bottom: 30px;
   cursor: pointer;
+
+  @include breakpoint(large) {
+    width: 508px;
+    padding-bottom: 0;
+  }
 
   .capture-container {
     width: 100%;
-    height: 431px;
+
+    @include breakpoint(large) {
+      // TODO: Check if this is actually necessary
+      height: 431px;
+    }
   }
 
   .label {

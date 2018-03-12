@@ -39,12 +39,20 @@ export default {
 .captures-slider {
   @include xy-cell-block-container;
 
-  padding-top: 140px;
   padding-bottom: 60px;
+
+  @include breakpoint(large) {
+    padding-top: 140px;
+  }
 }
 
 .captures-grid {
   @include xy-grid(vertical, $wrap: false);
+  padding: 0 20px;
+
+  @include breakpoint(large) {
+    padding: 0;
+  }
 }
 
 .capture-container {

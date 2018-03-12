@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import RedirectsScroll from '@/mixins/Redirects-scroll'
+// import RedirectsScroll from '@/mixins/Redirects-scroll'
 import ProjectPreview from '@/components/Project-preview'
 import projects from '@/data/projects'
 
@@ -20,7 +20,7 @@ export default {
   },
 
   mixins: [
-    RedirectsScroll
+    // RedirectsScroll
   ],
 
   data () {
@@ -30,7 +30,7 @@ export default {
   },
 
   mounted () {
-    this.redirectUnidirectionalScrollTo('.previews-slider')
+    // this.redirectUnidirectionalScrollTo('.previews-slider')
   }
 }
 </script>
@@ -48,16 +48,29 @@ export default {
   @extend .hides-scrollbars;
 
   @include xy-cell($size: auto);
-  @include xy-cell-block;
+  @include xy-cell-block($vertical: true);
   @include xy-gutters($negative: true);
   @include xy-grid;
+  @include flex-align($x: center);
+
+  @include breakpoint(large) {
+    @include xy-cell-block($vertical: false);
+    @include flex-align($x: left);
+  }
 }
 
 .previews-grid {
-  @include xy-grid($wrap: false);
+  @include xy-grid($wrap: false, $direction: vertical);
   @include xy-gutters($negative: true);
 
-  padding-left: 70px;
-  padding-right: 70px;
+  padding-top: 120px;
+
+  @include breakpoint(large) {
+    @include xy-grid($wrap: false, $direction: horizontal);
+
+    padding-top: 0;
+    padding-left: 70px;
+    padding-right: 70px;
+  }
 }
 </style>

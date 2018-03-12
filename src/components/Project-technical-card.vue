@@ -44,8 +44,13 @@ export default {
   @include flex-align($x: center, $y: middle);
 
   width: 100%;
-  height: 100%;
   line-height: 1.3;
+  text-align: center;
+
+  @include breakpoint(large) {
+    height: 100%;
+    text-align: left;
+  }
 
   .type {
     font-size: 24px;
@@ -63,9 +68,13 @@ export default {
   }
 
   .role {
-    margin-bottom: 160px;
+    margin-bottom: 20px;
     font-size: 20px;
     font-style: italic;
+
+    @include breakpoint(large) {
+      margin-bottom: 160px;
+    }
   }
 
   .story {
@@ -73,13 +82,27 @@ export default {
     font-size: 18px;
     font-family: 'Source Sans Pro', $body-font-family;
     line-height: 1.5;
+    display: none;
+
+    @include breakpoint(large) {
+      display: block;
+    }
+
+    // TODO: Refactor using show-for mixin
   }
 
   .separator {
     width: 42px;
     height: 1px;
     margin-bottom: 13px;
+    margin-left: auto;
+    margin-right: auto;
     background-color: from-palette(dolphin);
+
+    @include breakpoint(large) {
+      margin-left: 0;
+      margin-right: 0;
+    }
   }
   
   .footer {

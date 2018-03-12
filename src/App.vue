@@ -28,7 +28,12 @@ export default {
   @extend .gradient-background;
   @include xy-grid-container(100%);
 
+  overflow-x: hidden;
   height: 100vh;
   color: from-palette(white);
+
+  @include breakpoint(large) {
+    overflow: hidden;
+  }
 }
 </style>
