@@ -1,24 +1,36 @@
 <template lang='pug'>
   transition(name='fade')
     .footing(v-if='$route.name === "Portfolio"')
-      a(href='#') copyrights
-      a(href='#') about me
-      a(href='#') source code
+      span.copyrights &copy; 2018
+      a(href='https://erickmontanez.com') about me
+      a(href='https://github.com/codeams/codeams.me') source code
 </template>
 
 <style lang='scss'>
   .footing {
+    @include show-for(large);
+
     z-index: 1;
     position: absolute;
     bottom: 0;
     left: 0;
-    padding: 40px 0 40px 70px;
+    padding-top: 8 * $base-spacing;
+    padding-right: 0;
+    padding-bottom: 8 * $base-spacing;
+    padding-left: $site-left-padding;
     font-style: italic;
+    color: from-palette(corn-flower-blue);
+
+
+    .copyrights {
+      margin-right: 8 * $base-spacing;
+      cursor: default;
+    }
 
     a,
     a:visited {
-      margin-right: 40px;
-      color: from-palette(corn-flower-blue);
+      margin-right: 8 * $base-spacing;
+      color: inherit;
 
       &:last-of-type {
         margin-right: 0;

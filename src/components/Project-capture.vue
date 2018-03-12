@@ -56,7 +56,7 @@ export default {
   }
 
   img {
-    opacity: 1;
+   opacity: 1;
     transition: opacity 2s;
   }
 }

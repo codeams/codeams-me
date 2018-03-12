@@ -1,10 +1,10 @@
 <template lang='pug'>
   .heading
     router-link.name(to='/' tag='div').
-      Erick A. Montañez
+      Erick Montañez
     transition(name='fade')
       span.ocupation(v-if='$route.name === "Portfolio"').
-        Software engineer, web and iOS developer
+        Digital product developer
 </template>
 
 <style lang='scss'>
@@ -13,7 +13,19 @@
   position: absolute;
   top: 0;
   left: 0;
-  padding: 40px 0 40px 70px;
+  width: 100%;
+  padding: 20px 70px;
+  text-align: center;
+  border-bottom: 3px solid darken(#202740, 5%);
+  background-color: #202740;
+
+  @include breakpoint(large) {
+    width: auto;
+    padding: 40px 0 40px 70px;
+    text-align: left;
+    border: none;
+    background-color: transparent;
+  }
 
   .name {
     font-size: 20px;
