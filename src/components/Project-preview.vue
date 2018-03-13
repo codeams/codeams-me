@@ -1,7 +1,7 @@
 <template lang='pug'>
     router-link.project-preview(:to="`/project/${project.id}`" tag='div')
       .capture-container
-        project-capture(:src='project.cover' actionable)
+        project-capture(:capture='project.cover' actionable)
       .label
         strong.name {{ project.name }}
         span.dash &nbsp;—&nbsp;

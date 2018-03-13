@@ -4,9 +4,9 @@
       .captures-grid
         .capture-container(
           v-for='capture in project.captures'
-          :key='capture.id'
+          :key='capture.source'
         )
-          project-capture(:src='capture')
+          project-capture(:capture='capture')
 </template>
 
 <script>
