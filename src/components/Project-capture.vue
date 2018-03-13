@@ -1,73 +1,78 @@
 <template lang='pug'>
   .project-capture(:class='{ loading }')
     .image(:class='{ actionable }')
-      project-capture-loader
-      img(:src='src' @load='loading = false')
+      div(v-if='capture.type === "image"')
+        img(:src='capture.source' @load='loading = false')
+        project-capture-loader
+      div(v-else)
+        macbook(:screen-image-src='capture.source')
 </template>
 
 <script>
-import ProjectCaptureLoader from '@/components/Project-capture-loader'
+  import Macbook from '@/components/Macbook'
+  import ProjectCaptureLoader from '@/components/Project-capture-loader'
 
-export default {
-  components: {
-    ProjectCaptureLoader
-  },
-
-  props: {
-    src: {
-      type: String,
-      required: true
+  export default {
+    components: {
+      ProjectCaptureLoader,
+      Macbook
     },
-    actionable: Boolean
-  },
 
-  data () {
-    return {
-      loading: true
+    props: {
+      capture: {
+        type: Object,
+        required: true
+      },
+      actionable: Boolean
+    },
+
+    data () {
+      return {
+        loading: true
+      }
     }
   }
-}
 </script>
 
 <style lang='scss'>
-.project-capture {
-  position: relative;
-  width: 100%;
-  height: 0px;
-  padding-top: calc(100% * 0.84555);
-  border-radius: 4px;
-  overflow: hidden;
-  background-color: rgba(from-palette(white), 0.05);
-}
-
-.project-capture .image {
-  @extend .absolute-overlay;
-  transition: transform 1s;
-
-  &.actionable:hover {
-    transform: rotate(1deg);
-  }
-}
-
-.project-capture {
-  .loader {
-    opacity: 0;
-    transition: opacity 0.5s;
+  .project-capture {
+    position: relative;
+    width: 100%;
+    height: 0px;
+    padding-top: calc(100% * 0.84555);
+    border-radius: 4px;
+    overflow: hidden;
+    background-color: rgba(from-palette(white), 0.05);
   }
 
-  img {
-   opacity: 1;
-    transition: opacity 2s;
-  }
-}
+  .project-capture .image {
+    @extend .absolute-overlay;
+    transition: transform 1s;
 
-.project-capture.loading {
-  .loader {
+    &.actionable:hover {
+      transform: rotate(1deg);
+    }
+  }
+
+  .project-capture {
+    .loader {
+      opacity: 0;
+      transition: opacity 0.5s;
+    }
+
+    img {
     opacity: 1;
+      transition: opacity 2s;
+    }
   }
 
-  img {
-    opacity: 0;
+  .project-capture.loading {
+    .loader {
+      opacity: 1;
+    }
+
+    img {
+      opacity: 0;
+    }
   }
-}
 </style>
