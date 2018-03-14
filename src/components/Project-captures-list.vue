@@ -42,7 +42,13 @@ export default {
   padding-bottom: 60px;
 
   @include breakpoint(large) {
-    padding-top: 140px;
+    padding-top: calc(100% * 0.04228);
+
+    transform: translateY(-150px);
+    animation-name: slide-down;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out;
   }
 }
 
