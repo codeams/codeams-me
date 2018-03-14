@@ -1,10 +1,10 @@
 <template lang='pug'>
   .heading
     router-link.name(to='/' tag='div').
-      Erick Montañez
+      codeams
     transition(name='fade')
       span.ocupation(v-if='$route.name === "Portfolio"').
-        Digital product developer
+        passionated front-ender
 </template>
 
 <style lang='scss'>
@@ -28,9 +28,9 @@
   }
 
   .name {
-    font-size: 20px;
-    font-weight: bold;
-    letter-spacing: -0.16px;
+    font-size: 24px;
+    font-weight: 500;
+    letter-spacing: -1.16px;
     cursor: pointer;
   }
 
