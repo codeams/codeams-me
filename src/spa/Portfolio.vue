@@ -10,7 +10,7 @@
 </template>
 
 <script>
-// import RedirectsScroll from '@/mixins/Redirects-scroll'
+import RedirectsScroll from '@/mixins/Redirects-scroll'
 import ProjectPreview from '@/components/Project-preview'
 import projects from '@/data/projects'
 
@@ -20,7 +20,7 @@ export default {
   },
 
   mixins: [
-    // RedirectsScroll
+    RedirectsScroll
   ],
 
   data () {
@@ -30,7 +30,7 @@ export default {
   },
 
   mounted () {
-    // this.redirectUnidirectionalScrollTo('.previews-slider')
+    this.redirectUnidirectionalScrollTo('.previews-slider')
   }
 }
 </script>
@@ -56,6 +56,12 @@ export default {
   @include breakpoint(large) {
     @include xy-cell-block($vertical: false);
     @include flex-align($x: left);
+
+    transform: translate(150px);
+    animation-name: slide-left;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out;
   }
 }
 
