@@ -121,7 +121,6 @@ export default {
 
     a {
       color: inherit;
-      transition: transform 200ms;
 
       &:hover {
         text-decoration: underline;
