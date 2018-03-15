@@ -25,6 +25,7 @@ export default {
 @import '~assets/style/transitions';
 
 .app {
+  @extend .hides-scrollbars;
   @extend .gradient-background;
   @include xy-grid-container(100%);
 

@@ -3,12 +3,8 @@
 //  Codeams.me
 //
 //  Created by Erick A. Montañez on December 2nd, 2017.
-//  Copyright © 2017 Codeams. All rights reserved.
+//  Copyright © 2018 Codeams. All rights reserved.
 //
-
-// TODO: Improve functions naming
-// // Needs a more clear communication about the intention
-// // of the provided functions and their interface.
 
 const mousewheel = 'mousewheel'
 
@@ -17,32 +13,38 @@ const absorbVerticalScroll = function (event) {
 }
 
 const absorbHorizontalScroll = function (event) {
-  const isVerticalScroll = event.deltaY
-  const delta = isVerticalScroll ? event.deltaY : event.deltaX
-
-  if (isVerticalScroll) {
-    this.scrollLeft += delta
+  if (event.deltaX) {
+    this.scrollLeft += event.deltaX
     event.preventDefault()
   }
 }
 
 const RedirectsScroll = {
-  // TODO: Improve edge cases on query selector and selector data types
-  // // in order to provide a more appropiate function interface.
+  data () {
+    return {
+      scrollRedirectionFunctions: []
+    }
+  },
+
   methods: {
-    redirectScrollTo (selector) {
+    redirectVerticalScrollTo (selector) {
       let elemWhoAbsorbs = selector ? this.$el.querySelector(selector) : this.$el
-      window.addEventListener(mousewheel, absorbVerticalScroll.bind(elemWhoAbsorbs))
+      let scrollRedirectionFunction = absorbVerticalScroll.bind(elemWhoAbsorbs)
+      this.scrollRedirectionFunctions.push(absorbVerticalScroll.bind(elemWhoAbsorbs))
+      window.addEventListener(mousewheel, scrollRedirectionFunction)
     },
-    redirectUnidirectionalScrollTo (selector) {
+    redirectHorizontalScrollTo (selector) {
       let elemWhoAbsorbs = selector ? this.$el.querySelector(selector) : this.$el
-      window.addEventListener(mousewheel, absorbHorizontalScroll.bind(elemWhoAbsorbs))
+      let scrollRedirectionFunction = absorbHorizontalScroll.bind(elemWhoAbsorbs)
+      this.scrollRedirectionFunctions.push(scrollRedirectionFunction)
+      window.addEventListener(mousewheel, scrollRedirectionFunction)
     }
   },
 
   beforeDestroy () {
-    window.removeEventListener(mousewheel, absorbVerticalScroll)
-    window.removeEventListener(mousewheel, absorbHorizontalScroll)
+    for (let scrollRedirectionFunction of this.scrollRedirectionFunctions) {
+      window.removeEventListener(mousewheel, scrollRedirectionFunction)
+    }
   }
 }
 
