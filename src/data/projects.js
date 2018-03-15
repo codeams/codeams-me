@@ -8,7 +8,12 @@ let projects = [
     name: 'Lintercat landing',
     role: 'Vue development, UI/UX design',
     story: 'I did UI/UX design with Sketch and front-end development using Vue and Foundation. This  project presents Lintercat\'s digital product development services and amazes it\'s visitors with a motion focused experience.',
-    collabs: ['rejonpardenilla'],
+    collabs: [
+      {
+        nickname: 'rejonpardenilla',
+        url: 'https://github.com/rejonpardenilla'
+      }
+    ],
     startDate: 'December 2017',
     endDate: 'March 2017',
     captures: [
@@ -36,7 +41,16 @@ let projects = [
     name: 'Astro Dashboard',
     role: 'Web development, UI/UX design',
     story: 'I did web development using jQuery & PHP and UI design using Adobe Photoshop. The purpose of the project was to allow Astrosalsa to recover control over payments, classes access and accounting.',
-    collabs: ['isisnaomi', 'davidhernandeze'],
+    collabs: [
+      {
+        nickname: 'isisnaomi',
+        url: 'https://github.com/isisnaomi'
+      },
+      {
+        nickname: 'davidhernandeze',
+        url: 'https://github.com/davidhernandeze'
+      }
+    ],
     startDate: 'August 2016',
     endDate: 'January 2017',
     captures: [
@@ -64,7 +78,12 @@ let projects = [
     name: 'Warriors Lighthouse',
     role: 'Vue development, UI/UX design',
     story: 'I did web development using Vue and UI design using Adobe Experience Design. The main idea of the project was to increase the quality of the company processes by reducing the number of human errors.',
-    collabs: ['isisnaomi'],
+    collabs: [
+      {
+        nickname: 'isisnaomi',
+        url: 'https://github.com/isisnaomi'
+      }
+    ],
     startDate: 'March 2017',
     endDate: 'October 2017',
     captures: [
@@ -92,7 +111,12 @@ let projects = [
     name: 'Kiiwik Landing',
     role: 'Front-end development',
     story: 'I did front-end web development using Bootstrap. This project was an effort of the Kiiwik team to share the idea behind the project and communicate the security and personality the app has to offer.',
-    collabs: ['giocervera'],
+    collabs: [
+      {
+        nickname: 'giocervera',
+        url: 'https://www.behance.net/atomkinder'
+      }
+    ],
     startDate: 'June 2017',
     endDate: 'June 2017',
     captures: [
