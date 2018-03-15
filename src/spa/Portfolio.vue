@@ -30,7 +30,7 @@ export default {
   },
 
   mounted () {
-    this.redirectUnidirectionalScrollTo('.previews-slider')
+    this.redirectHorizontalScrollTo('.previews-slider')
   }
 }
 </script>

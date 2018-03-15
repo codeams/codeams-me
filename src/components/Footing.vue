@@ -19,7 +19,7 @@
     padding-bottom: 8 * $base-spacing;
     padding-left: $site-left-padding;
     font-style: italic;
-    color: from-palette(corn-flower-blue);
+    color: from-palette(dolphin);
 
 
     .copyrights {

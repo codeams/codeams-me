@@ -15,9 +15,11 @@
 
         .collabs
           | Co-worked with
-          span(v-for='collab, index in project.collabs' :key='collab')
+          span(v-for='collab, index in project.collabs' :key='collab.nickname')
             span(v-if='index > 0') ,
-            | &nbsp;@{{ collab }}
+            | &nbsp;
+            a(:href='collab.url' target='_blank').
+              @{{ collab.nickname }}
 
         .dates-interval(v-if='project.startDate === project.endDate').
           around #[strong {{ project.startDate }}]
@@ -115,6 +117,14 @@ export default {
 
     span {
       font-weight: bold;
+    }
+
+    a {
+      color: inherit;
+
+      &:hover {
+        text-decoration: underline;
+      }
     }
   }
 }

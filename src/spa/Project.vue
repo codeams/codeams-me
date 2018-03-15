@@ -42,7 +42,7 @@ export default {
   },
 
   mounted () {
-    this.redirectScrollTo('.captures-list-container')
+    this.redirectVerticalScrollTo('.captures-list-container')
   },
 
   methods: {
