@@ -15,7 +15,7 @@ let projects = [
       }
     ],
     startDate: 'December 2017',
-    endDate: 'March 2017',
+    endDate: 'March 2018',
     captures: [
       {
         type: 'macbook',

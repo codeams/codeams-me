@@ -7,34 +7,32 @@
 </template>
 
 <script>
-import Heading from '@/components/Heading'
-import Footing from '@/components/Footing'
+  import Heading from '@/components/Heading'
+  import Footing from '@/components/Footing'
 
-export default {
-  components: {
-    Heading,
-    Footing
+  export default {
+    components: {
+      Heading,
+      Footing
+    }
   }
-}
 </script>
 
 <style lang='scss'>
-// Include app.scss into the bundle
-@import 'app';
+  @import 'app';
+  @import '~assets/style/transitions';
 
-@import '~assets/style/transitions';
+  .app {
+    @extend %hides-scrollbars;
+    @extend %gradient-background;
+    @include xy-grid-container(100%);
 
-.app {
-  @extend .hides-scrollbars;
-  @extend .gradient-background;
-  @include xy-grid-container(100%);
+    overflow-x: hidden;
+    height: 100vh;
+    color: from-palette(white);
 
-  overflow-x: hidden;
-  height: 100vh;
-  color: from-palette(white);
-
-  @include breakpoint(large) {
-    overflow: hidden;
+    @include breakpoint(large) {
+      overflow: hidden;
+    }
   }
-}
 </style>

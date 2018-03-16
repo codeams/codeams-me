@@ -32,13 +32,11 @@ export default {
   @include xy-grid(vertical);
   @include xy-grid-frame(vertical, nested);
   @include flex-align($x: center);
-  
   max-width: 100%;
 }
 
 .captures-slider {
   @include xy-cell-block-container;
-
   padding-bottom: 60px;
 
   @include breakpoint(large) {
