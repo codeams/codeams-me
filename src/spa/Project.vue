@@ -85,7 +85,7 @@ export default {
   }
 
   .captures-list-container {
-    @extend .hides-scrollbars;
+    @extend %hides-scrollbars;
 
     @include xy-cell($size: auto);
     @include xy-cell-block($vertical: true);

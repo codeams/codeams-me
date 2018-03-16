@@ -45,7 +45,7 @@ export default {
 }
 
 .previews-slider {
-  @extend .hides-scrollbars;
+  @extend %hides-scrollbars;
 
   @include xy-cell($size: auto);
   @include xy-cell-block($vertical: true);
