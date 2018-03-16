@@ -9,7 +9,6 @@
 <style lang='scss'>
   .footing {
     @include show-for(large);
-
     z-index: 1;
     position: absolute;
     bottom: 0;
@@ -20,7 +19,6 @@
     padding-left: $site-left-padding;
     font-style: italic;
     color: from-palette(dolphin);
-
 
     .copyrights {
       margin-right: 8 * $base-spacing;

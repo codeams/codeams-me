@@ -5,17 +5,17 @@
         img(:src='capture.source' @load='loading = false')
         project-capture-loader
       div(v-else)
-        macbook(:screen-image-src='capture.source')
+        macbook-capture(:screen-image-src='capture.source')
 </template>
 
 <script>
-  import Macbook from '@/components/Macbook'
+  import MacbookCapture from '@/components/Macbook-capture'
   import ProjectCaptureLoader from '@/components/Project-capture-loader'
 
   export default {
     components: {
       ProjectCaptureLoader,
-      Macbook
+      MacbookCapture
     },
 
     props: {
@@ -36,17 +36,17 @@
 
 <style lang='scss'>
   .project-capture {
+    overflow: hidden;
     position: relative;
     width: 100%;
-    height: 0px;
+    height: 0;
     padding-top: calc(100% * 0.84555);
-    border-radius: 4px;
-    overflow: hidden;
+    border-radius: $global-radius;
     background-color: rgba(from-palette(white), 0.05);
   }
 
   .project-capture .image {
-    @extend .absolute-overlay;
+    @extend %absolute-overlay;
     transition: transform 1s;
 
     &.actionable:hover {
@@ -61,7 +61,7 @@
     }
 
     img {
-    opacity: 1;
+      opacity: 1;
       transition: opacity 2s;
     }
   }

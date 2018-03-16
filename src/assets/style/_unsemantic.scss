@@ -14,7 +14,7 @@
   height: 100%;
 }
 
-.absolute-overlay {
+%absolute-overlay {
   @extend .overlay;
   position: absolute;
 }
