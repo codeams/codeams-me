@@ -7,7 +7,10 @@ let projects = [
     type: 'Lintercat project',
     name: 'Lintercat landing',
     role: 'Vue development, UI/UX design',
-    story: 'I did UI/UX design with Sketch and front-end development using Vue and Foundation. This  project presents Lintercat\'s digital product development services and amazes it\'s visitors with a motion focused experience.',
+    story: `
+      <p>I did UI/UX design with Sketch and front-end development using Vue and Foundation.</p>
+      <p>This  project presents Lintercat's digital product development services and amazes it's visitors with a motion focused experience.</p>
+    `,
     collabs: [
       {
         nickname: 'rejonpardenilla',
@@ -40,7 +43,10 @@ let projects = [
     type: 'Personal project',
     name: 'Astro Dashboard',
     role: 'Web development, UI/UX design',
-    story: 'I did web development using jQuery & PHP and UI design using Adobe Photoshop. The purpose of the project was to allow Astrosalsa to recover control over payments, classes access and accounting.',
+    story: `
+      <p>I did web development using jQuery & PHP and UI/UX design using Adobe Photoshop.</p>
+      <p>The purpose of the project was to allow Astrosalsa to recover control over payments, classes access and accounting.</p>
+    `,
     collabs: [
       {
         nickname: 'isisnaomi',
@@ -77,7 +83,10 @@ let projects = [
     type: 'Personal project',
     name: 'Warriors Lighthouse',
     role: 'Vue development, UI/UX design',
-    story: 'I did web development using Vue and UI design using Adobe Experience Design. The main idea of the project was to increase the quality of the company processes by reducing the number of human errors.',
+    story: `
+      <p>I did web development using Vue and UI/UX design using Adobe Experience Design.</p>
+      <p>The main idea of the project was to increase the quality of the company processes by reducing the number of human errors.</p>
+    `,
     collabs: [
       {
         nickname: 'isisnaomi',
@@ -106,11 +115,49 @@ let projects = [
     ]
   },
   {
+    id: 'congress',
+    type: 'UADY Project',
+    name: 'CONISOFT Congress',
+    role: 'Vue+Laravel development, UI/UX design',
+    story: `
+      <p>I did UI/UX design using Adobe Experience Design, API development using Laravel and SPA development using Vue.</p>
+      <p>Congress is a reusable registration system that was first used for CONISOFT 2017.</p>
+    `,
+    collabs: [],
+    startDate: 'december 2016',
+    endDate: 'october 2017',
+    captures: [
+      {
+        type: 'image',
+        source: '/static/congress/1.png'
+      },
+      {
+        type: 'image',
+        source: '/static/congress/2.png'
+      },
+      {
+        type: 'image',
+        source: '/static/congress/3.png'
+      },
+      {
+        type: 'image',
+        source: '/static/congress/4.png'
+      },
+      {
+        type: 'image',
+        source: '/static/congress/5.png'
+      }
+    ]
+  },
+  {
     id: 'kiiwik-landing',
     type: 'YellowMe Project',
     name: 'Kiiwik Landing',
     role: 'Front-end development',
-    story: 'I did front-end web development using Bootstrap. This project was an effort of the Kiiwik team to share the idea behind the project and communicate the security and personality the app has to offer.',
+    story: `
+      <p>I did front-end web development using jQuery and Bootstrap.</p>
+      <p>This project was one of the channels the Kiiwik team used to share the idea behind the project and communicate the security and personality the Kiiwik app has to offer.</p>
+    `,
     collabs: [
       {
         nickname: 'giocervera',
