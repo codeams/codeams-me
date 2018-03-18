@@ -8,12 +8,12 @@
         .name {{ project.name }}
         .role {{ project.role }}
 
-      .story {{ project.story }}
+      .story(v-html='project.story')
 
       .footer
         .separator
 
-        .collabs
+        .collabs(v-if='project.collabs.length > 0')
           | Co-worked with
           span(v-for='collab, index in project.collabs' :key='collab.nickname')
             span(v-if='index > 0') ,
@@ -117,6 +117,10 @@
           text-decoration: underline;
         }
       }
+    }
+
+    .dates-interval {
+      text-transform: lowercase;
     }
   }
 </style>
