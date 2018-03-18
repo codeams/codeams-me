@@ -2,6 +2,7 @@
 export default class Project {
   constructor (attributes) {
     this.id = attributes.id || 0
+    this.visible = attributes.visible || false
     this.type = attributes.type || 'Unknown'
     this.name = attributes.name || 'Unknown'
     this.role = attributes.role || 'Unknown'
