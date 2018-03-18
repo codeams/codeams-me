@@ -4,6 +4,7 @@
       .previews-grid
         project-preview(
           v-for='project in projects'
+          v-show='project.visible'
           :project='project'
           :key='project.id'
         )

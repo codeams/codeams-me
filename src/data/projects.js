@@ -4,6 +4,7 @@ import Project from '@/models/Project'
 let projects = [
   {
     id: 'lintercat-landing',
+    visible: true,
     type: 'Lintercat project',
     name: 'Lintercat landing',
     role: 'Vue development, UI/UX design',
@@ -40,6 +41,7 @@ let projects = [
   },
   {
     id: 'astro-dashboard',
+    visible: true,
     type: 'Personal project',
     name: 'Astro Dashboard',
     role: 'Web development, UI/UX design',
@@ -80,6 +82,7 @@ let projects = [
   },
   {
     id: 'warriors-lighthouse',
+    visible: true,
     type: 'Personal project',
     name: 'Warriors Lighthouse',
     role: 'Vue development, UI/UX design',
@@ -116,6 +119,7 @@ let projects = [
   },
   {
     id: 'congress',
+    visible: true,
     type: 'UADY Project',
     name: 'CONISOFT Congress',
     role: 'Vue+Laravel development, UI/UX design',
@@ -151,6 +155,7 @@ let projects = [
   },
   {
     id: 'kiiwik-landing',
+    visible: false,
     type: 'YellowMe Project',
     name: 'Kiiwik Landing',
     role: 'Front-end development',
