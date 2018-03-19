@@ -11,7 +11,6 @@
 </template>
 
 <script>
-  import RedirectsScroll from '@/mixins/Redirects-scroll'
   import ProjectPreview from '@/components/Project-preview'
   import projects from '@/data/projects'
 
@@ -20,47 +19,44 @@
       ProjectPreview
     },
 
-    mixins: [
-      RedirectsScroll
-    ],
-
     data () {
       return {
         projects
       }
-    },
-
-    mounted () {
-      this.redirectHorizontalScrollTo('.previews-slider')
     }
   }
 </script>
 
 <style lang='scss'>
   .portfolio {
+    @extend %hides-scrollbars;
     @include xy-grid;
     @include xy-grid-frame($nested: true);
+    @include xy-cell-block($vertical: true);
     @include flex-align($x: center, $y: middle);
     height: 100%;
-  }
-
-  .previews-slider {
-    @extend %hides-scrollbars;
-    @include xy-cell($size: auto);
-    @include xy-cell-block($vertical: true);
-    @include xy-gutters($negative: true);
-    @include xy-grid;
-    @include flex-align($x: center);
 
     @include breakpoint(large) {
       @include xy-cell-block($vertical: false);
-      @include flex-align($x: left);
+    }
+  }
 
+  .previews-slider {
+    @include xy-cell($size: auto);
+    @include xy-gutters($negative: true);
+    @include xy-grid;
+    @include flex-align($x: center);
+    @include max-size(100%);
+
+    @include breakpoint(large) {
+      @include flex-align($x: left);
+      @include animation(
+        $duration: 1s,
+        $fill-mode: forwards,
+        $name: slide-left,
+        $timing-function: ease-out
+      );
       transform: translate(150px);
-      animation-name: slide-left;
-      animation-duration: 1s;
-      animation-fill-mode: forwards;
-      animation-timing-function: ease-out;
     }
   }
 
@@ -71,9 +67,7 @@
 
     @include breakpoint(large) {
       @include xy-grid($wrap: false, $direction: horizontal);
-      padding-top: 0;
-      padding-left: 70px;
-      padding-right: 70px;
+      @include paddings($vertical: 0, $horizontal: 70px);
     }
   }
 </style>
