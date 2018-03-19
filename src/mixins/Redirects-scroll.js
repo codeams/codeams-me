@@ -12,13 +12,6 @@ const absorbVerticalScroll = function (event) {
   this.scrollTop += event.deltaY
 }
 
-const absorbHorizontalScroll = function (event) {
-  if (event.deltaX) {
-    this.scrollLeft += event.deltaX
-    event.preventDefault()
-  }
-}
-
 const RedirectsScroll = {
   data () {
     return {
@@ -30,12 +23,6 @@ const RedirectsScroll = {
     redirectVerticalScrollTo (selector) {
       let elemWhoAbsorbs = selector ? this.$el.querySelector(selector) : this.$el
       let scrollRedirectionFunction = absorbVerticalScroll.bind(elemWhoAbsorbs)
-      this.scrollRedirectionFunctions.push(absorbVerticalScroll.bind(elemWhoAbsorbs))
-      window.addEventListener(mousewheel, scrollRedirectionFunction)
-    },
-    redirectHorizontalScrollTo (selector) {
-      let elemWhoAbsorbs = selector ? this.$el.querySelector(selector) : this.$el
-      let scrollRedirectionFunction = absorbHorizontalScroll.bind(elemWhoAbsorbs)
       this.scrollRedirectionFunctions.push(scrollRedirectionFunction)
       window.addEventListener(mousewheel, scrollRedirectionFunction)
     }

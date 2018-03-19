@@ -1,0 +1,36 @@
+
+@mixin max-size($size) {
+  max-width: $size;
+  max-height: $size;
+}
+
+@mixin paddings ($top: 0, $right: 0, $bottom: 0, $left: 0) {
+  padding-top: $top;
+  padding-right: $right;
+  padding-bottom: $bottom;
+  padding-left: $left;
+} 
+
+@mixin paddings ($vertical: 0, $horizontal: 0) {
+  padding: $vertical $horizontal;
+}
+
+@mixin animation (
+  $delay: 0s,
+  $direction: normal,
+  $duration: 0,
+  $fill-mode: none,
+  $iteration-count: 1,
+  $name: none,
+  $play-state: running,
+  $timing-function: ease
+) {
+  animation-delay: $delay;
+  animation-direction: $direction;
+  animation-duration: $duration;
+  animation-fill-mode: $fill-mode;
+  animation-iteration-count: $iteration-count;
+  animation-name: $name;
+  animation-play-state: $play-state;
+  animation-timing-function: $timing-function;
+}
