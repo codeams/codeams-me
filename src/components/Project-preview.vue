@@ -34,7 +34,7 @@
     cursor: pointer;
 
     @include breakpoint(large) {
-      width: 508px;
+      width: 40vw;
       padding-bottom: 0;
     }
 

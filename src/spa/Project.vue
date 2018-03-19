@@ -65,7 +65,12 @@
     @include breakpoint(large) {
       @include flex-align($x: justify, $y: middle);
       @include xy-grid-frame;
-      padding: 0;    
+      padding: 0;
+    }
+
+    @include breakpoint(xxlarge) {
+      max-width: 1980px;
+      margin: 0 auto;
     }
 
     .technical-card-container {
@@ -87,7 +92,7 @@
       @include xy-cell($size: auto);
       @include xy-cell-block($vertical: true);
       overflow-y: visible;
-      max-width: 1000px;
+      max-width: 1440px;
 
       @include breakpoint(large) {
         overflow-y: auto;      
