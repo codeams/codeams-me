@@ -9,8 +9,8 @@
 </template>
 
 <script>
-  import MacbookCapture from '@/components/Macbook-capture'
-  import ProjectCaptureLoader from '@/components/Project-capture-loader'
+  import MacbookCapture from './components/Macbook-capture'
+  import ProjectCaptureLoader from './components/Project-capture-loader'
 
   export default {
     components: {

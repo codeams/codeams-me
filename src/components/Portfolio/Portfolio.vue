@@ -11,7 +11,7 @@
 </template>
 
 <script>
-  import ProjectPreview from '@/components/Project-preview'
+  import ProjectPreview from './components/Project-preview'
   import projects from '@/data/projects'
 
   export default {

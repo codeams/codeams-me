@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Portfolio from '@/spa/Portfolio'
-import Project from '@/spa/Project'
+import Portfolio from '@/components/Portfolio'
+import Project from '@/components/Project'
 
 Vue.use(Router)
 

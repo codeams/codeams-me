@@ -7,8 +7,8 @@
 </template>
 
 <script>
-  import Heading from '@/components/Heading'
-  import Footing from '@/components/Footing'
+  import Heading from './components/Heading'
+  import Footing from './components/Footing'
 
   export default {
     components: {
@@ -19,7 +19,7 @@
 </script>
 
 <style lang='scss'>
-  @import 'app';
+  @import 'styles/app';
   @import '~assets/style/transitions';
 
   .app {

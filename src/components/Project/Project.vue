@@ -10,8 +10,8 @@
 </template>
 
 <script>
-  import ProjectTechnicalCard from '@/components/Project-technical-card'
-  import ProjectCapturesList from '@/components/Project-captures-list'
+  import ProjectTechnicalCard from './components/Project-technical-card'
+  import ProjectCapturesList from './components/Project-captures-list'
   import RedirectsScroll from '@/mixins/Redirects-scroll'
   import projects from '@/data/projects'
 

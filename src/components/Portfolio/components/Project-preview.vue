@@ -10,7 +10,7 @@
 
 <script>
   import Project from '@/models/Project'
-  import ProjectCapture from '@/components/Project-capture'
+  import ProjectCapture from '@/components/shared/Project-capture'
 
   export default {
     components: {
