@@ -17,7 +17,6 @@
     padding-right: 0;
     padding-bottom: 8 * $base-spacing;
     padding-left: $site-left-padding;
-    font-style: italic;
     color: from-palette(dolphin);
 
     .copyrights {

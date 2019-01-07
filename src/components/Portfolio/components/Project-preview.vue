@@ -44,7 +44,6 @@
 
     .label {
       margin-top: 27px;
-      font-style: italic;
     }
   }
 </style>

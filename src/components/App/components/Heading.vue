@@ -36,7 +36,6 @@
 
     .ocupation {
       font-size: 18px;
-      font-style: italic;
       letter-spacing: -0.12px;
       cursor: default;
     }

@@ -73,7 +73,6 @@
     .role {
       margin-bottom: 20px;
       font-size: 20px;
-      font-style: italic;
 
       @include breakpoint(large) {
         margin-bottom: 160px;
@@ -97,9 +96,8 @@
         margin-left: 0;
       }
     }
-    
+
     .footer {
-      font-style: italic;
       color: from-palette(dolphin);
     }
 
